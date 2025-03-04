@@ -32,6 +32,8 @@ namespace Tobo.Audio.Editor
             AudioCreatorWindow window = EditorWindow.GetWindow<AudioCreatorWindow>();
             window.titleContent = new GUIContent("Import Audio");
             window.minSize = new Vector2(300, 450);
+
+            window.clips = Selection.GetFiltered<AudioClip>(SelectionMode.Assets).ToList();
         }
 
         private void OnEnable()
@@ -125,6 +127,9 @@ namespace Tobo.Audio.Editor
 
         void SaveBatch(string path)
         {
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+
             for (int i = 0; i < clips.Count; i++)
             {
                 List<AudioClip> _new = new List<AudioClip>();

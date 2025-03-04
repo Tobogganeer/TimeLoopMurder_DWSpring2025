@@ -15,92 +15,22 @@ namespace Tobo.Audio
         public enum ID
         {
             None = 0,
-            CabinetClosed = -180397299,
-            CabinetOpen = 67212331,
-            DoorLocked = -1361169457,
-            DoorOpen = -1650486193,
-            DrawerClosed = 1162377076,
-            DrawerOpen = -257647022,
-            FlashlightButton = -50425809,
-            GetKey = 1067224608,
-            ItemPickup = 1222083302,
-            KeypadBad = 603097914,
-            KeypadGood = 1516329000,
-            KeypadPress = -230049224,
-            KeyUse = 1181900191,
-            Locker = 1219129871,
-            NoiseCooler = -869308199,
-            NoiseFlourence = -699231602,
-            PatientBreathing = -1330351052,
-            PcStartup = 1714687667,
             SlotHover = -1850161273,
-            TurnStep_moveCamIDK_ = -1499080850,
             UIClick = 1713459037,
-            UIClick2 = 1577622645,
-            UIHover = 1718178577,
-            walking = -1746219646,
-            walking_Loop = 2130855777,
         }
 
-        public static Sound CabinetClosed => Get(ID.CabinetClosed);
-        public static Sound CabinetOpen => Get(ID.CabinetOpen);
-        public static Sound DoorLocked => Get(ID.DoorLocked);
-        public static Sound DoorOpen => Get(ID.DoorOpen);
-        public static Sound DrawerClosed => Get(ID.DrawerClosed);
-        public static Sound DrawerOpen => Get(ID.DrawerOpen);
-        public static Sound FlashlightButton => Get(ID.FlashlightButton);
-        public static Sound GetKey => Get(ID.GetKey);
-        public static Sound ItemPickup => Get(ID.ItemPickup);
-        public static Sound KeypadBad => Get(ID.KeypadBad);
-        public static Sound KeypadGood => Get(ID.KeypadGood);
-        public static Sound KeypadPress => Get(ID.KeypadPress);
-        public static Sound KeyUse => Get(ID.KeyUse);
-        public static Sound Locker => Get(ID.Locker);
-        public static Sound NoiseCooler => Get(ID.NoiseCooler);
-        public static Sound NoiseFlourence => Get(ID.NoiseFlourence);
-        public static Sound PatientBreathing => Get(ID.PatientBreathing);
-        public static Sound PcStartup => Get(ID.PcStartup);
         public static Sound SlotHover => Get(ID.SlotHover);
-        public static Sound TurnStep_moveCamIDK_ => Get(ID.TurnStep_moveCamIDK_);
         public static Sound UIClick => Get(ID.UIClick);
-        public static Sound UIClick2 => Get(ID.UIClick2);
-        public static Sound UIHover => Get(ID.UIHover);
-        public static Sound walking => Get(ID.walking);
-        public static Sound walking_Loop => Get(ID.walking_Loop);
 
         internal static Dictionary<string, string> FilenameToSoundIDName { get; private set; } = new Dictionary<string, string>()
         {
-            { "TurnStep(moveCamIDK)", "TurnStep_moveCamIDK_" },
         };
 
         internal static Dictionary<string, Sound.ID> SoundIDNameToSoundID { get; private set; } = new Dictionary<string, Sound.ID>()
         {
             { "None", Sound.ID.None },
-            { "CabinetClosed", Sound.ID.CabinetClosed },
-            { "CabinetOpen", Sound.ID.CabinetOpen },
-            { "DoorLocked", Sound.ID.DoorLocked },
-            { "DoorOpen", Sound.ID.DoorOpen },
-            { "DrawerClosed", Sound.ID.DrawerClosed },
-            { "DrawerOpen", Sound.ID.DrawerOpen },
-            { "FlashlightButton", Sound.ID.FlashlightButton },
-            { "GetKey", Sound.ID.GetKey },
-            { "ItemPickup", Sound.ID.ItemPickup },
-            { "KeypadBad", Sound.ID.KeypadBad },
-            { "KeypadGood", Sound.ID.KeypadGood },
-            { "KeypadPress", Sound.ID.KeypadPress },
-            { "KeyUse", Sound.ID.KeyUse },
-            { "Locker", Sound.ID.Locker },
-            { "NoiseCooler", Sound.ID.NoiseCooler },
-            { "NoiseFlourence", Sound.ID.NoiseFlourence },
-            { "PatientBreathing", Sound.ID.PatientBreathing },
-            { "PcStartup", Sound.ID.PcStartup },
             { "SlotHover", Sound.ID.SlotHover },
-            { "TurnStep(moveCamIDK)", Sound.ID.TurnStep_moveCamIDK_ },
             { "UIClick", Sound.ID.UIClick },
-            { "UIClick2", Sound.ID.UIClick2 },
-            { "UIHover", Sound.ID.UIHover },
-            { "walking", Sound.ID.walking },
-            { "walking_Loop", Sound.ID.walking_Loop },
         };
     }
 }
