@@ -21,7 +21,7 @@ public class PhotoCamera : MonoBehaviour
         RenderTexture.active = instance.rt;
         instance.renderCamera.Render();
 
-        Texture2D texture = new Texture2D(instance.rt.width, instance.rt.height, TextureFormat.RGBA32, false, false);
+        Texture2D texture = new Texture2D(instance.rt.width, instance.rt.height, TextureFormat.RGBA32, false, true);
         texture.ReadPixels(new Rect(0, 0, instance.rt.width, instance.rt.height), 0, 0);
         texture.Apply();
         return texture;
