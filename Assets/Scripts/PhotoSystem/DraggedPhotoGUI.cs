@@ -15,6 +15,9 @@ public class DraggedPhotoGUI : MonoBehaviour
     public Photo photo;
     RectTransform rt;
 
+    public static bool CurrentlyHoldingEvidence { get; private set; }
+    public static EvidenceObject.Type CurrentEvidenceType { get; private set; }
+
     private void Start()
     {
         rt = photo.GetComponent<RectTransform>();
@@ -29,11 +32,15 @@ public class DraggedPhotoGUI : MonoBehaviour
 
     public static void Enable(Photo photo)
     {
+        instance.photo.gameObject.SetActive(true);
         instance.photo.Init(photo.type);
+        CurrentlyHoldingEvidence = true;
+        CurrentEvidenceType = photo.type;
     }
 
     public static void Disable()
     {
         instance.photo.gameObject.SetActive(false);
+        CurrentlyHoldingEvidence = false;
     }
 }
