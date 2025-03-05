@@ -23,6 +23,8 @@ public class Interactor : MonoBehaviour
 
     GameObject currentObject; // The object we are currently hovered over
 
+    public static GameObject CurrentObject => instance.currentObject;
+
     private void Start()
     {
         cam = Camera.main;
