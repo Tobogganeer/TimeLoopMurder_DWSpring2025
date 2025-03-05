@@ -467,7 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   addedToPhotos: 0
-  photoCaption: Dirty shoe-prints
+  photoCaption: Shoe Prints
   photoOffset: {x: 0.76, y: -1.44}
   photoSize: 1.42
   capturedImage: {fileID: 0}
@@ -1587,6 +1587,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225570828298919866, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225570828298919866, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 1246976793394377141, guid: 619df69bf263acb43a8798c97132a69f,
         type: 3}

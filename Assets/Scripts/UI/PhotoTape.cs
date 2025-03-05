@@ -6,7 +6,7 @@ public class PhotoTape : MonoBehaviour
 {
     private void Start()
     {
-        // Unparent one variation
+        // Spare one child from our wrath
         Transform variationToBeSpared = transform.GetChild(Random.Range(0, transform.childCount)).transform;
         variationToBeSpared.SetParent(transform.parent);
 
