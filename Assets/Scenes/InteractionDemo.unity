@@ -669,6 +669,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7394863327670203627, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7628802379205329626, guid: 619df69bf263acb43a8798c97132a69f,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -943,7 +948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   addedToPhotos: 0
-  photoCaption: I love feet
+  photoCaption: mm foot
   photoOffset: {x: 0.04, y: 0}
   photoSize: 0.53
 --- !u!65 &1789412845
