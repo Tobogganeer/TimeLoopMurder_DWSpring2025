@@ -29,7 +29,7 @@ public class PhotoCamera : MonoBehaviour
         return texture;
     }
 
-    public static Texture2D TakePhoto(Evidence evidence)
+    public static Texture2D TakePhoto(EvidenceObject evidence)
     {
         // Set our position and size to look at the evidence
         instance.transform.position = evidence.transform.position + (Vector3)evidence.photoOffset;

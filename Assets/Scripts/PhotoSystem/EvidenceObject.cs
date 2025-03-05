@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Tobo.Attributes;
 using UnityEngine;
 
-public class Evidence : MonoBehaviour, IInteractable
+public class EvidenceObject : MonoBehaviour, IInteractable
 {
     public enum Type
     {
@@ -12,6 +12,7 @@ public class Evidence : MonoBehaviour, IInteractable
     }
 
 
+    // Member variables
     public Type type;
     [ReadOnly] public bool addedToPhotos = false;
 
@@ -21,14 +22,14 @@ public class Evidence : MonoBehaviour, IInteractable
     public float photoSize = 0.5f;
 
 
-    static Dictionary<Type, Evidence> allEvidence = new Dictionary<Type, Evidence>();
+    static Dictionary<Type, EvidenceObject> allEvidence = new Dictionary<Type, EvidenceObject>();
 
     private void Awake()
     {
         allEvidence.Add(type, this);
     }
 
-    public static Evidence Get(Type type) => allEvidence[type];
+    public static EvidenceObject Get(Type type) => allEvidence[type];
 
     public void OnClicked()
     {
