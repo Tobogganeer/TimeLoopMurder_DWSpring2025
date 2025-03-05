@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ebc13bedf30d574a832fdc503a5c480, type: 3}
   m_Name: Dad
   m_EditorClassIdentifier: 
-  dialogue: []
-  evidenceResponses: []
+  id: 0
+  dialogue:
+  - whenAsked: 0
+    respondWith: 
+  evidenceResponses:
+  - whenShown: 2
+    respondWith: 

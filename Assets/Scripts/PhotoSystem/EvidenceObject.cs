@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Tobo.Attributes;
 using UnityEngine;
 
-public class EvidenceObject : MonoBehaviour, IInteractable
+public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
 {
     public enum Type
     {
@@ -55,6 +55,8 @@ public class EvidenceObject : MonoBehaviour, IInteractable
             PhotoMenu.AddPhoto(type);
         }
     }
+
+    CursorType ICustomCursor.GetCursorType() => !addedToPhotos ? CursorType.Camera : CursorType.InteractHand;
 
     private void OnDrawGizmosSelected()
     {
