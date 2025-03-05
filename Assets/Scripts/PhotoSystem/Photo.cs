@@ -11,10 +11,14 @@ public class Photo : MonoBehaviour
     public RawImage image;
     public TMPro.TMP_Text caption;
 
+    [HideInInspector]
+    public Texture2D rawTexture;
+
     public void Init(EvidenceObject.Type type, Texture2D capturedImage)
     {
         this.type = type;
         image.texture = capturedImage;
         caption.text = EvidenceObject.Get(type).photoCaption;
+        rawTexture = capturedImage;
     }
 }
