@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Butler
   m_EditorClassIdentifier: 
   id: 2
+  headshot: {fileID: 21300000, guid: 7c7587ca960a8844ebd1bf34f3f13538, type: 3}
   dialogue: []
   evidenceResponses: []

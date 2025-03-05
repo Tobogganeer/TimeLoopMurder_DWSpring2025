@@ -2073,6 +2073,7 @@ GameObject:
   - component: {fileID: 8279986709969802777}
   - component: {fileID: 6215444998833404188}
   - component: {fileID: 4267367700465374889}
+  - component: {fileID: 4160479231902822853}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -2193,6 +2194,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photo: {fileID: 3504583806630799558}
+--- !u!114 &4160479231902822853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8742610872569765373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249f96f34771c22498f7cb7b645031ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entireGUI: {fileID: 6920569102354803675}
+  speechContainer: {fileID: 4146551937454135461}
+  portrait: {fileID: 3733341083715334984}
+  spokenLineText: {fileID: 863412223992151555}
+  npcs:
+  - {fileID: 11400000, guid: a664b805ab57528479295e7f8f30482e, type: 2}
+  - {fileID: 11400000, guid: 9323f74579813364a8b761b698bd5689, type: 2}
+  - {fileID: 11400000, guid: 39ab320701238324888c5e8246c63acf, type: 2}
+  - {fileID: 11400000, guid: fe5d882f951e8c1408b5c50bb1b6a7b2, type: 2}
+  - {fileID: 11400000, guid: c24d837a38627904491cafe5027ade84, type: 2}
 --- !u!1 &9178188987035944527
 GameObject:
   m_ObjectHideFlags: 0

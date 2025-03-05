@@ -9,6 +9,7 @@ public class NPC : ScriptableObject
     // ... it should work for the prototype
 
     public ID id;
+    public Sprite headshot;
 
     public List<InspectorDialogueLine> dialogue;
     public List<InspectorEvidenceLine> evidenceResponses;
