@@ -7,6 +7,7 @@ public class SpaceShooterKeycards : MonoBehaviour
 {
     public bool logUIDs;
 
+    public static KeycardCallback Jeff = new KeycardCallback(14873);
     public static KeycardCallback SpawnFlock { get; private set; } = new KeycardCallback(1042621551);
     public static KeycardCallback SpawnBombs { get; private set; } = new KeycardCallback(1043563799);
     public static KeycardCallback DestructiveExplode { get; private set; } = new KeycardCallback(1042658978);
@@ -16,6 +17,7 @@ public class SpaceShooterKeycards : MonoBehaviour
 
     static Dictionary<uint, KeycardCallback> All = new Dictionary<uint, KeycardCallback>()
     {
+        { Jeff.UID, Jeff },
         { SpawnFlock.UID, SpawnFlock },
         { SpawnBombs.UID, SpawnBombs },
         { DestructiveExplode.UID, DestructiveExplode },
@@ -29,6 +31,7 @@ public class SpaceShooterKeycards : MonoBehaviour
     void Start()
     {
         reader = new KeycardReader((uid) => OnKeycardRead(uid));
+        Jeff.OnRead += () => Debug.Log("HEHEHEHAW");
     }
 
     private void Update()
