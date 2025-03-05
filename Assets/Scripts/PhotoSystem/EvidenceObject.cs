@@ -25,12 +25,21 @@ public class EvidenceObject : MonoBehaviour, IInteractable
     [Range(0.1f, 3f)]
     public float photoSize = 0.5f;
 
+    [HideInInspector]
+    public Texture2D capturedImage;
+
 
     static Dictionary<Type, EvidenceObject> allEvidence = new Dictionary<Type, EvidenceObject>();
 
-    private void Awake()
+    private void OnEnable()
     {
         allEvidence.Add(type, this);
+    }
+
+    private void OnDisable()
+    {
+        // TODO: Store captured images so we can reload them when the scene reloads?
+        allEvidence.Remove(type);
     }
 
     public static EvidenceObject Get(Type type) => allEvidence[type];
@@ -42,7 +51,8 @@ public class EvidenceObject : MonoBehaviour, IInteractable
         {
             addedToPhotos = true;
             // TODO: Play sound here
-            PhotoMenu.AddPhoto(type, PhotoCamera.TakePhoto(this));
+            capturedImage = PhotoCamera.TakePhoto(this);
+            PhotoMenu.AddPhoto(type);
         }
     }
 

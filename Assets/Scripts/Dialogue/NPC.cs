@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Objects/NPC")]
 public class NPC : ScriptableObject
 {
+    // Note: THIS CODE IS TERRIBLE RIGHT NOW
+    // ... it should work for the prototype
+
     public ID id;
 
     public List<InspectorDialogueLine> dialogue;

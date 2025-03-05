@@ -29,7 +29,7 @@ public class DraggedPhotoGUI : MonoBehaviour
 
     public static void Enable(Photo photo)
     {
-        instance.photo.Init(photo.type, photo.rawTexture);
+        instance.photo.Init(photo.type);
     }
 
     public static void Disable()
