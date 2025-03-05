@@ -1564,6 +1564,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragged Photo
       objectReference: {fileID: 0}
+    - target: {fileID: 5587410571769868693, guid: 1fc7c8d3ca9173b4690795f119af9aa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6090339426084546286, guid: 1fc7c8d3ca9173b4690795f119af9aa8,
         type: 3}
       propertyPath: m_RaycastTarget
