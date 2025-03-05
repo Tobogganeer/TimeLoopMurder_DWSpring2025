@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Mom
   m_EditorClassIdentifier: 
   id: 1
+  headshot: {fileID: 21300000, guid: 9edd651950e54af4d9cc3399a35f6396, type: 3}
   dialogue: []
   evidenceResponses: []
