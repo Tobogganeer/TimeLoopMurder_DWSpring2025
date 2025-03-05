@@ -15,8 +15,12 @@ public class PhotoCamera : MonoBehaviour
     public Camera renderCamera;
     public RenderTexture rt;
 
-    public static Texture2D TakePhoto()
+    public static Texture2D TakePhoto(Vector3 position, float size)
     {
+        // Set cam position and size
+        instance.transform.position = position;
+        instance.renderCamera.orthographicSize = size;
+
         // Set up camera and render to RT
         instance.renderCamera.targetTexture = instance.rt;
         RenderTexture.active = instance.rt;
@@ -32,8 +36,6 @@ public class PhotoCamera : MonoBehaviour
     public static Texture2D TakePhoto(EvidenceObject evidence)
     {
         // Set our position and size to look at the evidence
-        instance.transform.position = evidence.transform.position + (Vector3)evidence.photoOffset;
-        instance.renderCamera.orthographicSize = evidence.photoSize;
-        return TakePhoto();
+        return TakePhoto(evidence.transform.position + (Vector3)evidence.photoOffset, evidence.photoSize);
     }
 }

@@ -512,6 +512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   addedToPhotos: 0
+  photoCaption: Potted plant
   photoOffset: {x: 0, y: 0}
   photoSize: 0.5
 --- !u!65 &1342116897
@@ -643,10 +644,110 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7333995695571031088, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333995695571031088, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333995695571031088, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333995695571031088, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333995695571031088, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628802379205329626, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628802379205329626, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628802379205329626, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628802379205329626, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628802379205329626, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422919804192979610, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422919804192979610, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422919804192979610, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422919804192979610, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422919804192979610, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8742610872569765373, guid: 619df69bf263acb43a8798c97132a69f,
         type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901972207877787292, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901972207877787292, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901972207877787292, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901972207877787292, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901972207877787292, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -842,6 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   addedToPhotos: 0
+  photoCaption: I love feet
   photoOffset: {x: 0.04, y: 0}
   photoSize: 0.53
 --- !u!65 &1789412845

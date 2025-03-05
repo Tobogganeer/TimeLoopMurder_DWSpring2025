@@ -17,6 +17,7 @@ public class EvidenceObject : MonoBehaviour, IInteractable
     [ReadOnly] public bool addedToPhotos = false;
 
     [Space]
+    public string photoCaption;
     public Vector2 photoOffset;
     [Range(0.1f, 3f)]
     public float photoSize = 0.5f;
@@ -38,6 +39,7 @@ public class EvidenceObject : MonoBehaviour, IInteractable
         {
             addedToPhotos = true;
             // TODO: Play sound here
+            PhotoMenu.AddPhoto(type, PhotoCamera.TakePhoto(this));
         }
     }
 

@@ -9,6 +9,6 @@ public class PhotoTesting : MonoBehaviour
     private void Update()
     {
         if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame)
-            rawImage.texture = PhotoCamera.TakePhoto();
+            rawImage.texture = PhotoCamera.TakePhoto(transform.position, 4);
     }
 }
