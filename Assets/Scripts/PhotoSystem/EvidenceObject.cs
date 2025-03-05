@@ -11,7 +11,7 @@ public class EvidenceObject : MonoBehaviour, IInteractable
         Plant,
         Fireplace,
         GunCabinet,
-        Rug
+        Rug,
     }
 
 
