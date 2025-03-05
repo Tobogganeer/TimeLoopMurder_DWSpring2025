@@ -8,7 +8,8 @@ public class EvidenceObject : MonoBehaviour, IInteractable
     public enum Type
     {
         Footprints,
-        Plant
+        Plant,
+        Fireplace
     }
 
 

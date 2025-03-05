@@ -29,6 +29,7 @@ public class PhotoCamera : MonoBehaviour
         // Read RT into a new texture and return it
         Texture2D texture = new Texture2D(instance.rt.width, instance.rt.height, TextureFormat.RGBA32, false, true);
         texture.ReadPixels(new Rect(0, 0, instance.rt.width, instance.rt.height), 0, 0);
+        texture.wrapMode = TextureWrapMode.Clamp;
         texture.Apply();
         return texture;
     }
