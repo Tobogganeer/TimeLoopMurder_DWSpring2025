@@ -734,6 +734,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1342116895}
   - component: {fileID: 1342116894}
+  - component: {fileID: 1342116897}
+  - component: {fileID: 1342116896}
   m_Layer: 0
   m_Name: TempPlant
   m_TagString: Untagged
@@ -808,6 +810,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1342116896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342116893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a313421bc422649b8c6c10b2a789a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  addedToPhotos: 0
+  photoOffset: {x: 0, y: 0}
+  photoSize: 0.5
+--- !u!65 &1342116897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342116893}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5683423, y: 0.91740453, z: 0.2}
+  m_Center: {x: 0, y: -0.041297734, z: 0}
 --- !u!1 &1638286253
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +946,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1789412843}
   - component: {fileID: 1789412842}
+  - component: {fileID: 1789412845}
+  - component: {fileID: 1789412844}
   m_Layer: 0
   m_Name: TempFootprint
   m_TagString: Untagged
@@ -981,6 +1022,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -80.262}
+--- !u!114 &1789412844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789412841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a313421bc422649b8c6c10b2a789a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  addedToPhotos: 0
+  photoOffset: {x: 0.04, y: 0}
+  photoSize: 0.53
+--- !u!65 &1789412845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789412841}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4269655, y: 1.0000001, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1832032296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,7 +1437,7 @@ PrefabInstance:
     - target: {fileID: 1022915521824162843, guid: dec692fd121fe7e42b2fcfb9571c4af6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1428,6 +1506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244618472126503649, guid: 84025ef0b3790af49a3fe1de9791fae3,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7244618472126503649, guid: 84025ef0b3790af49a3fe1de9791fae3,
         type: 3}
