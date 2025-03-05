@@ -10,7 +10,8 @@ public class EvidenceObject : MonoBehaviour, IInteractable
         Footprints,
         Plant,
         Fireplace,
-        GunCabinet
+        GunCabinet,
+        Rug
     }
 
 
