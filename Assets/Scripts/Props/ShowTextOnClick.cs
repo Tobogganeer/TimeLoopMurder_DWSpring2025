@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextInteractable : MonoBehaviour, IInteractable
+public class ShowTextOnClick : MonoBehaviour, IInteractable
 {
     [TextArea(1, 3)]
     public string text;
