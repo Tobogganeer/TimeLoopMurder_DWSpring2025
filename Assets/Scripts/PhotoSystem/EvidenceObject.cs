@@ -9,7 +9,8 @@ public class EvidenceObject : MonoBehaviour, IInteractable
     {
         Footprints,
         Plant,
-        Fireplace
+        Fireplace,
+        GunCabinet
     }
 
 
