@@ -28,6 +28,8 @@ public class DialogueGUI : MonoBehaviour
 
     Dictionary<NPC.ID, NPC> npcDict = new Dictionary<NPC.ID, NPC>();
     List<Button> choiceButtons = new List<Button>();
+    // Hacky way to track and make sure we don't add a choice twice
+    List<EvidenceObject.Type> buttonEvidenceTypes = new List<EvidenceObject.Type>();
 
     float guiAlpha;
     bool guiEnabled;
@@ -78,16 +80,20 @@ public class DialogueGUI : MonoBehaviour
         for (int i = instance.choiceButtons.Count - 1; i >= 0; i--)
             Destroy(instance.choiceButtons[i].gameObject);
         instance.choiceButtons.Clear();
+        instance.buttonEvidenceTypes.Clear();
     }
 
-    public static void AddChoice(string text, Action callback)
+    public static void AddChoice(string text, Action callback, EvidenceObject.Type type = EvidenceObject.Type.None)
     {
         // Spawn button, set callback when clicked, set text
         Button button = Instantiate(instance.choiceButtonPrefab, instance.choiceContainer).GetComponent<Button>();
         button.onClick.AddListener(() => callback?.Invoke());
         button.transform.GetChild(0).GetComponent<TMPro.TMP_Text>().text = text;
         instance.choiceButtons.Add(button);
+        instance.buttonEvidenceTypes.Add(type);
     }
+
+    public static bool HasEvidenceButton(EvidenceObject.Type type) => instance.buttonEvidenceTypes.Contains(type);
 
     public static void AddGoodbyeChoice()
     {

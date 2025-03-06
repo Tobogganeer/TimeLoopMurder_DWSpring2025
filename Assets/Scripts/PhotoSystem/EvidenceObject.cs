@@ -12,6 +12,7 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         Fireplace,
         GunCabinet,
         Rug,
+        None
     }
 
 
@@ -68,4 +69,12 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
 public interface ICanHaveEvidenceDroppedOnMe
 {
     void HandleEvidence(EvidenceObject.Type type);
+}
+
+public static class EvidenceTypeExtensions
+{
+    public static string GetQuestion(this EvidenceObject.Type type)
+    {
+
+    }
 }

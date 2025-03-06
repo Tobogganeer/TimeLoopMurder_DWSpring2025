@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af36ac22b05dd2742a961268f55b40ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npc: 0
 --- !u!1 &1348762314037558966
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,8 +932,10 @@ GameObject:
   - component: {fileID: 6447211010459468594}
   - component: {fileID: 4152590595367024925}
   - component: {fileID: 3985710424352319048}
+  - component: {fileID: 4286275205072331117}
+  - component: {fileID: 6740965656661041884}
   m_Layer: 5
-  m_Name: Vertical Gradient
+  m_Name: Vertical Gradient and Closer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -995,6 +998,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4286275205072331117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3498141354140208256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557dfa6fc361db34f814e64b80a0a595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6740965656661041884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3498141354140208256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9460ddcbd7dca684ca8f7a10ecaf9eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3741096967224202569
 GameObject:
   m_ObjectHideFlags: 0

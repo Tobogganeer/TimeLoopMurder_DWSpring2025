@@ -11,6 +11,8 @@ public class NPCHeadshot : MonoBehaviour, ICustomCursor, ICanHaveEvidenceDropped
 
     public void HandleEvidence(EvidenceObject.Type type)
     {
-        DialogueGUI.Speak(npc, type);
+        if (!DialogueGUI.HasEvidenceButton(type))
+            DialogueGUI.AddChoice()
+        //DialogueGUI.Speak(npc, type);
     }
 }
