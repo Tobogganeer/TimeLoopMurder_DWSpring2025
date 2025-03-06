@@ -8,9 +8,9 @@ public class SafeDial : MonoBehaviour, IInteractable
 {
     public TMP_Text leftNumberText;
     public TMP_Text rightNumberText;
-    public int pixelThreshold = 3;
+    public int pixelThreshold = 20;
     public int maxNumber = 39;
-    public float dialRotation = 20f;
+    public float dialRotation = 125f;
 
     bool dragging;
 
