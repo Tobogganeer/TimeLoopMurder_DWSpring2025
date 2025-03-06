@@ -14,8 +14,6 @@ public class CameraMovement : MonoBehaviour
 
     public float xOffset = 2.8f;
     public CameraPosition current;
-    public GameObject leftButton;
-    public GameObject rightButton;
 
     private void Start()
     {
@@ -26,8 +24,6 @@ public class CameraMovement : MonoBehaviour
     {
         current = newPosition;
         transform.position = transform.position.WithX(current.transform.position.x + xOffset);
-        leftButton.SetActive(current.left);
-        rightButton.SetActive(current.right);
     }
 
     public static void GoLeft()
