@@ -575,8 +575,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92495306ac294c84e89a275a8abd9df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Dress shoes. Quite large.
-  time: 3
+  text: The culprit left footprints here. Not only did they wear shoes that seem
+    to be large dress shoes, but they didn't even worry about leaving a trace. This
+    just makes it easier for me to follow this trail of evidence.
+  time: 6
   oneTimeOnly: 1
 --- !u!20 &474811701 stripped
 Camera:
@@ -1044,8 +1046,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92495306ac294c84e89a275a8abd9df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: An empty fireplace. It's collecting dust.
-  time: 3
+  text: A fireplace. Spring is almost here, so I don't see any reason to keep myself
+    cozy near this thing anymore. I definitely plan on doing it again next winter,
+    though.
+  time: 5
   oneTimeOnly: 1
 --- !u!1 &1241497556
 GameObject:
@@ -1389,8 +1393,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92495306ac294c84e89a275a8abd9df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Quite heavy. I'm not even sure I could lift it!
-  time: 3
+  text: The potted plant has been knocked over, and is quite heavy. Only a strong
+    person could be able to lift it.
+  time: 5
   oneTimeOnly: 0
 --- !u!1 &1351606483
 GameObject:
@@ -1530,8 +1535,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92495306ac294c84e89a275a8abd9df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: There's a hole in this cabinet. It's quite far up.
-  time: 3
+  text: It looks like the culprit broke into the gun cabinet and took the gun. I
+    remember the time I suffered from anxiety, and my dad decided to take me to a
+    shooting range so I could stop being anxious all the time, and man up instead.
+    Needless to say, it didn't help with my anxiety.
+  time: 8
   oneTimeOnly: 1
 --- !u!1001 &1577625879
 PrefabInstance:
@@ -1950,8 +1958,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92495306ac294c84e89a275a8abd9df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: The door to the hall.
-  time: 2
+  text: The amount of times this door has assaulted me still infuriates me to this
+    day. Everyone else always tells me to watch where I'm going, completely apathetic
+    towards the struggles I go through each and every day, wondering whether this
+    door will assault me again or leave me alone. I despise this door.
+  time: 9
   oneTimeOnly: 0
 --- !u!65 &1641033748
 BoxCollider:
@@ -2254,8 +2265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92495306ac294c84e89a275a8abd9df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: This rug has been moved around.
-  time: 3
+  text: There's broken glass on the rug. I hope that whoever cleans this mess up
+    makes sure to get it all. Stepping on glass is an absolutely shattering feeling.
+  time: 5
   oneTimeOnly: 1
 --- !u!1 &1980519926
 GameObject:
