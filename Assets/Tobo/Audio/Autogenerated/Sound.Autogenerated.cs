@@ -20,6 +20,7 @@ namespace Tobo.Audio
             PhotoDrop = 930660842,
             Select = 1410561011,
             SlotHover = -1850161273,
+            Suspense_1_Loop = 1777985376,
             UIClick = 1713459037,
         }
 
@@ -28,6 +29,7 @@ namespace Tobo.Audio
         public static Sound PhotoDrop => Get(ID.PhotoDrop);
         public static Sound Select => Get(ID.Select);
         public static Sound SlotHover => Get(ID.SlotHover);
+        public static Sound Suspense_1_Loop => Get(ID.Suspense_1_Loop);
         public static Sound UIClick => Get(ID.UIClick);
 
         internal static Dictionary<string, string> FilenameToSoundIDName { get; private set; } = new Dictionary<string, string>()
@@ -42,6 +44,7 @@ namespace Tobo.Audio
             { "PhotoDrop", Sound.ID.PhotoDrop },
             { "Select", Sound.ID.Select },
             { "SlotHover", Sound.ID.SlotHover },
+            { "Suspense_1_Loop", Sound.ID.Suspense_1_Loop },
             { "UIClick", Sound.ID.UIClick },
         };
     }
