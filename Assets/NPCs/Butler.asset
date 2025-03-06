@@ -17,20 +17,32 @@ MonoBehaviour:
   dialogue:
   - whenAsked: 0
     respondWith: Good evening, Mark. How may I be of service to you?
+  - whenAsked: 3
+    respondWith: I am his personal butler, as I am with you and your mother as well.
+  - whenAsked: 2
+    respondWith: Cooking dinner for tonight.
   - whenAsked: 1
     respondWith: I am here to assist your parents with dinner tonight, and as you
       can see, I'm quite busy at the moment.
-  - whenAsked: 2
-    respondWith: Cooking dinner for tonight.
-  - whenAsked: 3
-    respondWith: I am his personal butler, as I am with you and your mother as well.
   - whenAsked: 4
     respondWith: Goodbye for now.
   evidenceResponses:
-  - whenShown: 1
-    respondWith: Is that an insult? I'll have you know that despite my age, I'm still
-      quite capable of a lot more than you realize.
+  - whenShown: 2
+    respondWith: I've cleaned the fireplace upon numerous times since I've worked
+      for your parents.
   - whenShown: 0
     respondWith: Flat dress shoes, as per usual.
   - whenShown: 3
-    respondWith: But of course.
+    respondWith: Ah, yes. That would be where your father keeps his gun, is it not?
+  - whenShown: 1
+    respondWith: Is that an insult? I'll have you know that despite my age, I'm still
+      quite capable of a lot more than you realize.
+  - whenShown: 4
+    respondWith: Unlikely. Unless your mother every time she drinks until she's tipsy,
+      I am at the very least aware of my surroundings.
+  - whenShown: 6
+    respondWith: Unfortunately, only your father has access to that information.
+  - whenShown: 7
+    respondWith: Your dad does indeed have a will.
+  - whenShown: 8
+    respondWith: But of course. Your mother and I were the first ones to know.

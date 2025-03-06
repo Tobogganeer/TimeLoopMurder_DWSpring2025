@@ -13,7 +13,10 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         Fireplace,
         GunCabinet,
         Rug,
-        None
+        None,
+        Safe,
+        OldWill,
+        ChangedWill
     }
 
 
@@ -52,9 +55,13 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         // Check to see if we've been collected
         if (!addedToPhotos)
         {
+            Loop.TakeAction();
+
             capturedEvidence.Add(type);
             addedToPhotos = true;
-            Sound.Select.Play2D();
+            //Sound.Select.Play2D();
+            Sound.Camera_shutter.Play2D();
+            Sound.DelayedScribble.Play2D();
             AddToPhotoMenu();
         }
     }
@@ -74,7 +81,7 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         }
     }
 
-    CursorType ICustomCursor.GetCursorType() => !addedToPhotos ? CursorType.Camera : CursorType.InteractHand;
+    CursorType ICustomCursor.GetCursorType() => !addedToPhotos ? CursorType.Camera : CursorType.Default;
 
     private void OnDrawGizmosSelected()
     {
@@ -95,8 +102,11 @@ public static class EvidenceTypeExtensions
         EvidenceObject.Type.Footprints => "\"What shoes are you wearing?\"",
         EvidenceObject.Type.Plant => "\"Are you strong enough to move the potted plant?\"",
         EvidenceObject.Type.Fireplace => "\"What do you know about the fireplace?\"",
-        EvidenceObject.Type.GunCabinet => "\"Can you reach the top of the gun cabinet?\"",
+        EvidenceObject.Type.GunCabinet => "\"Do you know what's in the cabinet?\"",
         EvidenceObject.Type.Rug => "\"Did you scuff the rug?\"",
+        EvidenceObject.Type.Safe => "\"Do you know how to get into the safe?\"",
+        EvidenceObject.Type.OldWill => "\"Doesn't Dad have a will?\"",
+        EvidenceObject.Type.ChangedWill => "\"Do you know that Dad is changing his will?\"",
         _ => throw new System.NotImplementedException(),
     };
 }

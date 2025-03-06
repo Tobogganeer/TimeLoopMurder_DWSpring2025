@@ -8,7 +8,6 @@ using Tobo.Audio;
 
 public class Photo : MonoBehaviour, IInteractable
 {
-    [ReadOnly]
     public EvidenceObject.Type type;
     public RawImage image;
     public TMPro.TMP_Text caption;
@@ -16,6 +15,15 @@ public class Photo : MonoBehaviour, IInteractable
     bool dragging;
 
     static bool anyPhotoPickedUpYet;
+
+    const float StartScale = 0.8f;
+    const float ShrinkSpeed = 3f;
+
+    private void Start()
+    {
+        transform.localScale = Vector3.one * StartScale;
+        Init(type);
+    }
 
     public void Init(EvidenceObject.Type type)
     {
@@ -41,6 +49,8 @@ public class Photo : MonoBehaviour, IInteractable
 
     private void Update()
     {
+        transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, Time.deltaTime * ShrinkSpeed);
+
         if (dragging && Mouse.current.leftButton.wasReleasedThisFrame)
         {
             dragging = false;

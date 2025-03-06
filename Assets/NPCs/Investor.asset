@@ -13,5 +13,50 @@ MonoBehaviour:
   m_Name: Investor
   m_EditorClassIdentifier: 
   id: 3
-  dialogue: []
-  evidenceResponses: []
+  headshot: {fileID: 21300000, guid: d42a6ce85d904f04c969cbb7fba7421f, type: 3}
+  dialogue:
+  - whenAsked: 0
+    respondWith: It's a pleasure seeing you here. Your father told me all about you.
+  - whenAsked: 3
+    respondWith: We were former business partners. The best of the best, actually.
+      We were very successful together, making HUGE amounts of money. I'm telling
+      ya, it's weird how difficult he's being with me these days. He isn't co-operating
+      like he used to.
+  - whenAsked: 2
+    respondWith: Oh, I just got out of a meeting with your father. He doesn't want
+      me to buy his company, but he'll want to eventually. I just gotta make an offer
+      he can't refuse.
+  - whenAsked: 1
+    respondWith: I'm trying to settle a deal with your father. It'll be the best
+      of the best deals in history. If I purchase his company, it'll make millions-
+      no, billions more than it does now.
+  - whenAsked: 4
+    respondWith: I hope I get to talk to you again later. I still haven't told you
+      about all of my successes. They're HUGE successes.
+  evidenceResponses:
+  - whenShown: 2
+    respondWith: Oh yes, it's that fireplace in that room. It's obviously not as
+      good as my fireplace, but it's not like your father even knows about it. He's
+      never been to my place before.
+  - whenShown: 0
+    respondWith: Flat dress shoes, the dress shoes to end all other dress shoes.
+      They're made out of the richest material known to mankind.
+  - whenShown: 3
+    respondWith: The cabinet? No, can't say for sure. I've seen the room during my
+      stay here, but didn't take the time to inspect everything.
+  - whenShown: 1
+    respondWith: Oh definitely, I'm very strong. As a matter of fact, I'm so strong
+      that I could cause an earthquake right here, right now.
+  - whenShown: 4
+    respondWith: No, I didn't. I prefer to keep things neat, being a perfectionist
+      myself. If I was in there and saw that rug looking like it, I would fix it
+      right away.
+  - whenShown: 6
+    respondWith: What safe? Is your father hiding any secrets from me that he doesn't
+      want me to know? If so, he's probably afraid of me. Everyone who's against
+      me is.
+  - whenShown: 7
+    respondWith: I've never been informed of his will.
+  - whenShown: 8
+    respondWith: No, your father hasn't told me anything like that. Hopefully he's
+      changing it so that I can get his company, though.
