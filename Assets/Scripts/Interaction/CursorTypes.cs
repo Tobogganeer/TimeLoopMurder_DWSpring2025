@@ -48,5 +48,6 @@ public enum CursorType
     InteractHand,
     Speak,
     QuestionMark,
-    Camera
+    Camera,
+    DownArrow
 }

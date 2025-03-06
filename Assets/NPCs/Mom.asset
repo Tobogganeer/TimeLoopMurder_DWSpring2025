@@ -14,5 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   headshot: {fileID: 21300000, guid: 9edd651950e54af4d9cc3399a35f6396, type: 3}
-  dialogue: []
-  evidenceResponses: []
+  dialogue:
+  - whenAsked: 0
+    respondWith: Oh, hello sweetie! What do you need?
+  - whenAsked: 1
+    respondWith: Why wouldn't I be? Your father and I are expecting guests for dinner,
+      so it's only natural that I would want to be there to welcome them and be a
+      good hostess.
+  - whenAsked: 2
+    respondWith: What? Am I not allowed to have a smell from the barrel? Tonight's
+      an occasion that calls for it, and you know that I'm not one for missed opportunities.
+  - whenAsked: 3
+    respondWith: That's a silly question. Your father and I raised you ever since
+      you were just a little baby. A lot has changed since then, but I still remember
+      the first time I saw you like it was just yesterday. Those were the days where
+      life was a lot simpler.
+  - whenAsked: 4
+    respondWith: Take care, sweetie! Love you!
+  evidenceResponses:
+  - whenShown: 0
+    respondWith: Nothing special, they're just flat dress shoes. Do you like them?
+  - whenShown: 1
+    respondWith: Of course I'm strong enough to move the potted plant. I moved it
+      there last week, remember?
+  - whenShown: 3
+    respondWith: I'm pretty sure I can. There's a reason your father used to call
+      me "Mommy Long Legs". But, I suppose that's a story for another time.

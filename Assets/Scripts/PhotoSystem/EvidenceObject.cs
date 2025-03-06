@@ -64,3 +64,8 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         Gizmos.DrawWireCube(transform.position + (Vector3)photoOffset, cube);
     }
 }
+
+public interface ICanHaveEvidenceDroppedOnMe
+{
+    void HandleEvidence(EvidenceObject.Type type);
+}
