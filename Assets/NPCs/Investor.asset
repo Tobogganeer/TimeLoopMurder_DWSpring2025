@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Investor
   m_EditorClassIdentifier: 
   id: 3
+  headshot: {fileID: 21300000, guid: d42a6ce85d904f04c969cbb7fba7421f, type: 3}
   dialogue: []
   evidenceResponses: []
