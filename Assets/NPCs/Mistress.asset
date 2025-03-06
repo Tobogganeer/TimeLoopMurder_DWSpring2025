@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mistress
   m_EditorClassIdentifier: 
   id: 4
-  headshot: {fileID: 0}
+  headshot: {fileID: 21300000, guid: 72e2187701032004aa372a4796219f61, type: 3}
   dialogue:
   - whenAsked: 0
     respondWith: Oh, it's you.
