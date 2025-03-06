@@ -6,10 +6,14 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    private static CameraMovement instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public float xOffset = 2.8f;
     public CameraPosition current;
-    public GameObject leftButton;
-    public GameObject rightButton;
 
     private void Start()
     {
@@ -20,19 +24,17 @@ public class CameraMovement : MonoBehaviour
     {
         current = newPosition;
         transform.position = transform.position.WithX(current.transform.position.x + xOffset);
-        leftButton.SetActive(current.left);
-        rightButton.SetActive(current.right);
     }
 
-    public void GoLeft()
+    public static void GoLeft()
     {
-        SetNewPosition(current.left);
+        instance.SetNewPosition(instance.current.left);
         Sound.Move.Play2D();
     }
 
-    public void GoRight()
+    public static void GoRight()
     {
-        SetNewPosition(current.right);
+        instance.SetNewPosition(instance.current.right);
         Sound.Move.Play2D();
     }
 }
