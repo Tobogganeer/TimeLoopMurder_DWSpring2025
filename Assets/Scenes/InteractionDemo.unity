@@ -1827,76 +1827,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5153390914703995541, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 3334026313352824626}
-    - target: {fileID: 5871443828008782445, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871443828008782445, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871443828008782445, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871443828008782445, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871443828008782445, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871443828008782445, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7051904476221021862, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 3334026313352824626}
-    - target: {fileID: 8584546384325355102, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8584546384325355102, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8584546384325355102, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8584546384325355102, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8584546384325355102, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8584546384325355102, guid: 619df69bf263acb43a8798c97132a69f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8742610872569765373, guid: 619df69bf263acb43a8798c97132a69f,
         type: 3}
       propertyPath: m_Name
@@ -2859,7 +2789,7 @@ PrefabInstance:
         type: 3}
       propertyPath: current
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2004347432}
     - target: {fileID: 8661281983508178594, guid: 84025ef0b3790af49a3fe1de9791fae3,
         type: 3}
       propertyPath: leftButton
@@ -2875,18 +2805,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84025ef0b3790af49a3fe1de9791fae3, type: 3}
---- !u!114 &3334026313352824626 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8661281983508178594, guid: 84025ef0b3790af49a3fe1de9791fae3,
-    type: 3}
-  m_PrefabInstance: {fileID: 3334026313352824625}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 819d458fb6a07774b8cc274ef07dc4e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
