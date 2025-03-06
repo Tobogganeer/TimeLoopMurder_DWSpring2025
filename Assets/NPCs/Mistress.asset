@@ -13,5 +13,29 @@ MonoBehaviour:
   m_Name: Mistress
   m_EditorClassIdentifier: 
   id: 4
-  dialogue: []
-  evidenceResponses: []
+  headshot: {fileID: 0}
+  dialogue:
+  - whenAsked: 0
+    respondWith: Oh, it's you.
+  - whenAsked: 3
+    respondWith: Your mom and I are friends, and she's married to him.
+  - whenAsked: 2
+    respondWith: What does it look like? I'm drinking.
+  - whenAsked: 1
+    respondWith: Your mom invited me over.
+  - whenAsked: 4
+    respondWith: Bye.
+  evidenceResponses:
+  - whenShown: 2
+    respondWith: I don't know anything about it other than the fact that it's a fireplace.
+      Why are you even talking to me about this?
+  - whenShown: 0
+    respondWith: High heels from a high-end brand. It's not like you can afford what
+      I have, though.
+  - whenShown: 3
+    respondWith: The cabinet is made of glass, so of course I do. Stop wasting my
+      time with your pointless questions.
+  - whenShown: 1
+    respondWith: No. If I were, I wouldn't have anyone do things for me.
+  - whenShown: 4
+    respondWith: Why would I scuff up the rug?
