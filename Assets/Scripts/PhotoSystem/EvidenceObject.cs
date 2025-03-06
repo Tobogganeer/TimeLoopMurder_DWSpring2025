@@ -73,8 +73,13 @@ public interface ICanHaveEvidenceDroppedOnMe
 
 public static class EvidenceTypeExtensions
 {
-    public static string GetQuestion(this EvidenceObject.Type type)
+    public static string GetQuestion(this EvidenceObject.Type type) => type switch
     {
-
-    }
+        EvidenceObject.Type.Footprints => "\"What shoes are you wearing?\"",
+        EvidenceObject.Type.Plant => "\"Are you strong enough to move the potted plant?\"",
+        EvidenceObject.Type.Fireplace => "\"What do you know about the fireplace?\"",
+        EvidenceObject.Type.GunCabinet => "\"Can you reach the top of the gub cabinet?\"",
+        EvidenceObject.Type.Rug => "\"Did you scuff the rug?\"",
+        _ => throw new System.NotImplementedException(),
+    };
 }

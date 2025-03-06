@@ -34,6 +34,8 @@ public class Photo : MonoBehaviour, IInteractable
         {
             dragging = false;
             DraggedPhotoGUI.Disable();
+            if (Interactor.CurrentObject.TryGetComponent(out ICanHaveEvidenceDroppedOnMe canDropPhoto))
+                canDropPhoto.HandleEvidence(type);
         }    
     }
 }

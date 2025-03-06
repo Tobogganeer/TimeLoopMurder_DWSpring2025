@@ -57,22 +57,29 @@ public class DialogueGUI : MonoBehaviour
         instance.guiEnabled = false;
     }
 
-    public static void Speak(NPC.ID npc, string text)
+    public static void Speak(NPC.ID npc, string text, bool addDefaultChoices = true)
     {
         Enable(npc);
         // Turn on speech bubble
         instance.speechContainer.gameObject.SetActive(true);
         instance.spokenLineText.text = text;
+        if (addDefaultChoices)
+            AddDefaultChoices();
     }
 
-    public static void Speak(NPC.ID npc, NPC.DialogueType line)
+    public static void Speak(NPC.ID npc, NPC.DialogueType line, bool addDefaultChoices = true)
     {
-        Speak(npc, instance.npcDict[npc].dialogue.Find((dialogue) => dialogue.whenAsked == line).respondWith);
+        Speak(npc, instance.npcDict[npc].dialogue.Find((dialogue) => dialogue.whenAsked == line).respondWith, addDefaultChoices);
     }
 
-    public static void Speak(NPC.ID npc, EvidenceObject.Type evidence)
+    public static void Speak(NPC.ID npc, EvidenceObject.Type evidence, bool addDefaultChoices = true)
     {
-        Speak(npc, instance.npcDict[npc].evidenceResponses.Find((ev) => ev.whenShown == evidence).respondWith);
+        // TODO: make this not terrible
+        var line = instance.npcDict[npc].evidenceResponses.Find((ev) => ev.whenShown == evidence);
+        if (line != null)
+            Speak(npc, line.respondWith, addDefaultChoices);
+        else
+            Speak(npc, "No response.", addDefaultChoices);
     }
 
     public static void ClearChoices()
@@ -95,9 +102,21 @@ public class DialogueGUI : MonoBehaviour
 
     public static bool HasEvidenceButton(EvidenceObject.Type type) => instance.buttonEvidenceTypes.Contains(type);
 
-    public static void AddGoodbyeChoice()
+    public static void AddBackChoice()
     {
-        AddChoice("\"Goodbye\"", () => Speak(CurrentNPC.id, NPC.DialogueType.Farewell));
+        AddChoice("Back", () =>
+        {
+            ClearChoices();
+            AddDefaultChoices();
+        });
+    }
+
+    public static void AddDefaultChoices()
+    {
+        AddChoice("\"Goodbye.\"", () => Speak(CurrentNPC.id, NPC.DialogueType.Farewell, false));
+        AddChoice("\"How do you know my dad?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.HowDoYouKnowMyDad));
+        AddChoice("\"What are you doing?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhatAreYouDoing));
+        AddChoice("\"Why are you here?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhyAreYouHere));
     }
 
     private void Update()
