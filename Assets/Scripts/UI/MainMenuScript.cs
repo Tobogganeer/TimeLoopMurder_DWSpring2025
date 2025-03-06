@@ -11,6 +11,5 @@ public class MainMenuScript : MonoBehaviour
     {
         if (isStartMenu) { SceneManager.LoadScene("InteractionDemo"); }
         else { SceneManager.LoadScene("Main Menu"); }
-    }
-    
+    }    
 }
