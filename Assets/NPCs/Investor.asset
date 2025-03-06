@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   headshot: {fileID: 21300000, guid: d42a6ce85d904f04c969cbb7fba7421f, type: 3}
-  dialogue: []
-  evidenceResponses: []
+  dialogue:
+  - whenAsked: 0
+    respondWith: 
+  - whenAsked: 1
+    respondWith: 
+  evidenceResponses:
+  - whenShown: 1
+    respondWith: 
