@@ -7,6 +7,10 @@ using Tobo.Audio;
 
 public class SafeDial : MonoBehaviour, IInteractable
 {
+    public GameObject safeUIToDisableWhenCorrect;
+    public GameObject closedSafe;
+    public GameObject openSafe;
+
     public TMP_Text leftNumberText;
     public TMP_Text rightNumberText;
     public int pixelThreshold = 20;
@@ -35,7 +39,7 @@ public class SafeDial : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        if (!dragging)
+        if (!dragging || CurrentCombo == correctCombo)
             return;
 
         // Get how many pixels we have moved
@@ -85,6 +89,15 @@ public class SafeDial : MonoBehaviour, IInteractable
             // Stop input
             dragging = false;
             Sound.UIClick2.Play2D();
+            Invoke(nameof(ExitSafe), 1f); // Wait 1 second
         }
+    }
+
+    // Called after a delay using Invoke
+    void ExitSafe()
+    {
+        safeUIToDisableWhenCorrect.SetActive(false);
+        closedSafe.SetActive(false);
+        openSafe.SetActive(true);
     }
 }
