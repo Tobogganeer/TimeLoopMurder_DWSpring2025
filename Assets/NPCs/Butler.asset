@@ -40,3 +40,9 @@ MonoBehaviour:
   - whenShown: 4
     respondWith: Unlikely. Unless your mother every time she drinks until she's tipsy,
       I am at the very least aware of my surroundings.
+  - whenShown: 6
+    respondWith: Unfortunately, only your father has access to that information.
+  - whenShown: 7
+    respondWith: Your dad does indeed have a will.
+  - whenShown: 8
+    respondWith: But of course. Your mother and I were the first ones to know.

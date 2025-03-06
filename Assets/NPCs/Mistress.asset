@@ -39,3 +39,10 @@ MonoBehaviour:
     respondWith: No. If I were, I wouldn't have anyone do things for me.
   - whenShown: 4
     respondWith: Why would I scuff up the rug?
+  - whenShown: 6
+    respondWith: Does it look like I'd know?
+  - whenShown: 7
+    respondWith: He does, yes. What does that have to do with anything?
+  - whenShown: 8
+    respondWith: I know all about that. I would love to inherit his wealth, but don't
+      tell anyone I said that.
