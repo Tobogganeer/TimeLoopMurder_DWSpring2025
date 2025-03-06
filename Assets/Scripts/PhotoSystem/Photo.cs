@@ -8,7 +8,6 @@ using Tobo.Audio;
 
 public class Photo : MonoBehaviour, IInteractable
 {
-    [ReadOnly]
     public EvidenceObject.Type type;
     public RawImage image;
     public TMPro.TMP_Text caption;
@@ -19,6 +18,12 @@ public class Photo : MonoBehaviour, IInteractable
 
     const float StartScale = 0.8f;
     const float ShrinkSpeed = 3f;
+
+    private void Start()
+    {
+        transform.localScale = Vector3.one * StartScale;
+        Init(type);
+    }
 
     public void Init(EvidenceObject.Type type)
     {
@@ -40,11 +45,6 @@ public class Photo : MonoBehaviour, IInteractable
             anyPhotoPickedUpYet = true;
             PopUp.Show("Drag a photo to an NPC to ask them about it");
         }
-    }
-
-    private void Start()
-    {
-        transform.localScale = Vector3.one * StartScale;
     }
 
     private void Update()
