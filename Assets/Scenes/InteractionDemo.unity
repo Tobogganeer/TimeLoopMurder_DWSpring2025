@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 565006709}
   - component: {fileID: 565006708}
   m_Layer: 0
-  m_Name: Plant2
+  m_Name: Plant (Evidence)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -923,8 +923,9 @@ GameObject:
   - component: {fileID: 768640318}
   - component: {fileID: 768640317}
   - component: {fileID: 768640316}
+  - component: {fileID: 768640319}
   m_Layer: 0
-  m_Name: Plant1
+  m_Name: Plant (filler)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1033,6 +1034,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &768640319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768640314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa13cac425bc7e44bbf33297402eeed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 0
 --- !u!1 &828882942
 GameObject:
   m_ObjectHideFlags: 0

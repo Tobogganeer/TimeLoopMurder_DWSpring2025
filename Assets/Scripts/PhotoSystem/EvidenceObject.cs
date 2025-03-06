@@ -79,7 +79,7 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         }
     }
 
-    CursorType ICustomCursor.GetCursorType() => !addedToPhotos ? CursorType.Camera : CursorType.InteractHand;
+    CursorType ICustomCursor.GetCursorType() => !addedToPhotos ? CursorType.Camera : CursorType.Default;
 
     private void OnDrawGizmosSelected()
     {
@@ -100,7 +100,7 @@ public static class EvidenceTypeExtensions
         EvidenceObject.Type.Footprints => "\"What shoes are you wearing?\"",
         EvidenceObject.Type.Plant => "\"Are you strong enough to move the potted plant?\"",
         EvidenceObject.Type.Fireplace => "\"What do you know about the fireplace?\"",
-        EvidenceObject.Type.GunCabinet => "\"Can you reach the top of the gun cabinet?\"",
+        EvidenceObject.Type.GunCabinet => "\"Do you know what's in the cabinet?\"",
         EvidenceObject.Type.Rug => "\"Did you scuff the rug?\"",
         EvidenceObject.Type.Safe => "\"Do you know how to get into the safe?\"",
         EvidenceObject.Type.OldWill => "\"Doesn't Dad have a will?\"",
