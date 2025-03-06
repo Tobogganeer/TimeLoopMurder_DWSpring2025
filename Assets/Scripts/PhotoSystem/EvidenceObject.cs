@@ -59,7 +59,9 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
 
             capturedEvidence.Add(type);
             addedToPhotos = true;
-            Sound.Select.Play2D();
+            //Sound.Select.Play2D();
+            Sound.Camera_shutter.Play2D();
+            Sound.DelayedScribble.Play2D();
             AddToPhotoMenu();
         }
     }

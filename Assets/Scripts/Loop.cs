@@ -19,8 +19,6 @@ public class Loop : MonoBehaviour
     [ReadOnly, SerializeField] // Only used to show in inspector
     private int startingMinutes;
 
-    public TMP_Text timerText;
-
     int actionsLeft;
     int MinutesLeft => actionsLeft * minutesPerAction;
 
@@ -30,17 +28,11 @@ public class Loop : MonoBehaviour
     private void Start()
     {
         actionsLeft = startingActions;
-        UpdateUI();
-    }
-    public void UpdateUI()
-    {
-        timerText.SetText("Minutes remaining in loop: " + MinutesLeft);
     }
 
     public static void TakeAction()
     {
         instance.actionsLeft--;
-        instance.UpdateUI();
 
         if (instance.actionsLeft <= 0)
             instance.LoopEnded();
