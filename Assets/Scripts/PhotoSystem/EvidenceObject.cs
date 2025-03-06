@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Tobo.Attributes;
+using Tobo.Audio;
 using UnityEngine;
 
 public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
@@ -51,7 +52,7 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         if (!addedToPhotos)
         {
             addedToPhotos = true;
-            // TODO: Play sound here
+            Sound.Select.Play2D();
             capturedImage = PhotoCamera.TakePhoto(this);
             PhotoMenu.AddPhoto(type);
         }

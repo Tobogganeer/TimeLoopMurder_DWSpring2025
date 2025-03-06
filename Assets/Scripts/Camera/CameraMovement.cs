@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Tobo.Audio;
 using Tobo.Util;
 using UnityEngine;
 
@@ -26,10 +27,12 @@ public class CameraMovement : MonoBehaviour
     public void GoLeft()
     {
         SetNewPosition(current.left);
+        Sound.Move.Play2D();
     }
 
     public void GoRight()
     {
         SetNewPosition(current.right);
+        Sound.Move.Play2D();
     }
 }

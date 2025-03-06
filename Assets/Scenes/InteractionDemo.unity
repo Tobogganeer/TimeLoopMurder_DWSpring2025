@@ -1049,7 +1049,7 @@ MonoBehaviour:
   text: A fireplace. Spring is almost here, so I don't see any reason to keep myself
     cozy near this thing anymore. I definitely plan on doing it again next winter,
     though.
-  time: 5
+  time: 8
   oneTimeOnly: 1
 --- !u!1 &1241497556
 GameObject:

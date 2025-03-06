@@ -15,10 +15,18 @@ namespace Tobo.Audio
         public enum ID
         {
             None = 0,
+            Move = 23645320,
+            PhotoDrag = 930660399,
+            PhotoDrop = 930660842,
+            Select = 1410561011,
             SlotHover = -1850161273,
             UIClick = 1713459037,
         }
 
+        public static Sound Move => Get(ID.Move);
+        public static Sound PhotoDrag => Get(ID.PhotoDrag);
+        public static Sound PhotoDrop => Get(ID.PhotoDrop);
+        public static Sound Select => Get(ID.Select);
         public static Sound SlotHover => Get(ID.SlotHover);
         public static Sound UIClick => Get(ID.UIClick);
 
@@ -29,6 +37,10 @@ namespace Tobo.Audio
         internal static Dictionary<string, Sound.ID> SoundIDNameToSoundID { get; private set; } = new Dictionary<string, Sound.ID>()
         {
             { "None", Sound.ID.None },
+            { "Move", Sound.ID.Move },
+            { "PhotoDrag", Sound.ID.PhotoDrag },
+            { "PhotoDrop", Sound.ID.PhotoDrop },
+            { "Select", Sound.ID.Select },
             { "SlotHover", Sound.ID.SlotHover },
             { "UIClick", Sound.ID.UIClick },
         };

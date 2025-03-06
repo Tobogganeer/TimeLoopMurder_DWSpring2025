@@ -4,6 +4,7 @@ using Tobo.Attributes;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using Tobo.Audio;
 
 public class Photo : MonoBehaviour, IInteractable
 {
@@ -26,6 +27,7 @@ public class Photo : MonoBehaviour, IInteractable
         // When we start clicking on this object, show us dragging it
         dragging = true;
         DraggedPhotoGUI.Enable(this);
+        Sound.PhotoDrag.Play2D();
     }
 
     private void Update()
@@ -34,8 +36,10 @@ public class Photo : MonoBehaviour, IInteractable
         {
             dragging = false;
             DraggedPhotoGUI.Disable();
-            if (Interactor.CurrentObject.TryGetComponent(out ICanHaveEvidenceDroppedOnMe canDropPhoto))
+            if (Interactor.CurrentObject != null && Interactor.CurrentObject.TryGetComponent(out ICanHaveEvidenceDroppedOnMe canDropPhoto))
                 canDropPhoto.HandleEvidence(type);
+            else
+                Sound.PhotoDrop.Play2D();
         }    
     }
 }
