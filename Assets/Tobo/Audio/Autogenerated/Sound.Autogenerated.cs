@@ -22,6 +22,7 @@ namespace Tobo.Audio
             SlotHover = -1850161273,
             Suspense_1_Loop = 1777985376,
             UIClick = 1713459037,
+            UIClick2 = 1577622645,
         }
 
         public static Sound Move => Get(ID.Move);
@@ -31,6 +32,7 @@ namespace Tobo.Audio
         public static Sound SlotHover => Get(ID.SlotHover);
         public static Sound Suspense_1_Loop => Get(ID.Suspense_1_Loop);
         public static Sound UIClick => Get(ID.UIClick);
+        public static Sound UIClick2 => Get(ID.UIClick2);
 
         internal static Dictionary<string, string> FilenameToSoundIDName { get; private set; } = new Dictionary<string, string>()
         {
@@ -46,6 +48,7 @@ namespace Tobo.Audio
             { "SlotHover", Sound.ID.SlotHover },
             { "Suspense_1_Loop", Sound.ID.Suspense_1_Loop },
             { "UIClick", Sound.ID.UIClick },
+            { "UIClick2", Sound.ID.UIClick2 },
         };
     }
 }

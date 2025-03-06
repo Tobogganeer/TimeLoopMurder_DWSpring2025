@@ -713,7 +713,7 @@ MonoBehaviour:
     to be large dress shoes, but they didn't even worry about leaving a trace. This
     just makes it easier for me to follow this trail of evidence.
   time: 6
-  oneTimeOnly: 1
+  oneTimeOnly: 0
 --- !u!20 &474811701 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4772518108299895940, guid: dec692fd121fe7e42b2fcfb9571c4af6,
@@ -1184,7 +1184,7 @@ MonoBehaviour:
     cozy near this thing anymore. I definitely plan on doing it again next winter,
     though.
   time: 8
-  oneTimeOnly: 1
+  oneTimeOnly: 0
 --- !u!1 &1241497556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1674,7 @@ MonoBehaviour:
     shooting range so I could stop being anxious all the time, and man up instead.
     Needless to say, it didn't help with my anxiety.
   time: 8
-  oneTimeOnly: 1
+  oneTimeOnly: 0
 --- !u!1001 &1577625879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1683,6 +1683,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1986411825925313939, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20.000122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578119869327059141, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -22.45279
+      objectReference: {fileID: 0}
     - target: {fileID: 3639668637965141759, guid: 619df69bf263acb43a8798c97132a69f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2937,7 +2947,7 @@ MonoBehaviour:
   text: There's broken glass on the rug. I hope that whoever cleans this mess up
     makes sure to get it all. Stepping on glass is an absolutely shattering feeling.
   time: 5
-  oneTimeOnly: 1
+  oneTimeOnly: 0
 --- !u!1 &1975074164
 GameObject:
   m_ObjectHideFlags: 0
