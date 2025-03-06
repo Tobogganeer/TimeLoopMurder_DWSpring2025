@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundID: 930660399
   clips:
-  - {fileID: 8300000, guid: 4976503c64f3a4d4ea2dae2bfe9a076d, type: 3}
-  - {fileID: 8300000, guid: 1762c9a6a6e4cd340a2f18dd4cdd8f69, type: 3}
-  - {fileID: 8300000, guid: 5b0ba78faea09f44e97316a1d4f70e15, type: 3}
+  - {fileID: 8300000, guid: 95a2caa2c10a6db45a16cf03f077e2f0, type: 3}
+  - {fileID: 8300000, guid: 75b137f5b66f32e44bba53714927c555, type: 3}
   maxDistance: 35
   category: 1
   volume: 1

@@ -38,7 +38,7 @@ public class DialogueGUI : MonoBehaviour
     bool guiEnabled;
     NPC.ID currentNPC;
 
-    const float AlphaSpeed = 1f;
+    const float AlphaSpeed = 1.3f;
 
     public static bool Enabled => instance.guiEnabled;
     public static NPC CurrentNPC => instance.npcDict[instance.currentNPC];
@@ -99,11 +99,14 @@ public class DialogueGUI : MonoBehaviour
         instance.buttonEvidenceTypes.Clear();
     }
 
-    public static void AddChoice(string text, Action callback, EvidenceObject.Type type = EvidenceObject.Type.None)
+    public static void AddChoice(string text, Action callback, bool takesAnAction = true, EvidenceObject.Type type = EvidenceObject.Type.None)
     {
         // Spawn button, set callback when clicked, set text
         Button button = Instantiate(instance.choiceButtonPrefab, instance.choiceContainer).GetComponent<Button>();
         button.onClick.AddListener(() => callback?.Invoke());
+        if (takesAnAction)
+            button.onClick.AddListener(() => Loop.TakeAction());
+
         button.transform.GetChild(0).GetComponent<TMPro.TMP_Text>().text = text;
         instance.choiceButtons.Add(button);
         instance.buttonEvidenceTypes.Add(type);
@@ -117,12 +120,12 @@ public class DialogueGUI : MonoBehaviour
         {
             ClearChoices();
             AddDefaultChoices();
-        });
+        }, false);
     }
 
     public static void AddDefaultChoices()
     {
-        AddChoice("\"Goodbye.\"", () => Speak(CurrentNPC.id, NPC.DialogueType.Farewell, false));
+        AddChoice("\"Goodbye.\"", () => Speak(CurrentNPC.id, NPC.DialogueType.Farewell, false), false);
         AddChoice("\"How do you know my dad?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.HowDoYouKnowMyDad));
         AddChoice("\"What are you doing?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhatAreYouDoing));
         AddChoice("\"Why are you here?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhyAreYouHere));

@@ -8,6 +8,8 @@ public class Door : MonoBehaviour, IInteractable, ICustomCursor
 
     public void OnClicked()
     {
+        Loop.TakeAction();
+
         if (direction == Direction.Left)
             CameraMovement.GoLeft();
         else

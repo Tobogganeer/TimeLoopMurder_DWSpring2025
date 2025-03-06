@@ -15,38 +15,56 @@ namespace Tobo.Audio
         public enum ID
         {
             None = 0,
+            Camera_shutter = -1828477750,
+            DelayedScribble = 1607479595,
+            G_U_N = 726955317,
+            Glass_Breaking = -295322627,
             Move = 23645320,
             PhotoDrag = 930660399,
             PhotoDrop = 930660842,
             Select = 1410561011,
             SlotHover = -1850161273,
             Suspense_1_Loop = 1777985376,
+            Thud = 23847098,
             UIClick = 1713459037,
             UIClick2 = 1577622645,
         }
 
+        public static Sound Camera_shutter => Get(ID.Camera_shutter);
+        public static Sound DelayedScribble => Get(ID.DelayedScribble);
+        public static Sound G_U_N => Get(ID.G_U_N);
+        public static Sound Glass_Breaking => Get(ID.Glass_Breaking);
         public static Sound Move => Get(ID.Move);
         public static Sound PhotoDrag => Get(ID.PhotoDrag);
         public static Sound PhotoDrop => Get(ID.PhotoDrop);
         public static Sound Select => Get(ID.Select);
         public static Sound SlotHover => Get(ID.SlotHover);
         public static Sound Suspense_1_Loop => Get(ID.Suspense_1_Loop);
+        public static Sound Thud => Get(ID.Thud);
         public static Sound UIClick => Get(ID.UIClick);
         public static Sound UIClick2 => Get(ID.UIClick2);
 
         internal static Dictionary<string, string> FilenameToSoundIDName { get; private set; } = new Dictionary<string, string>()
         {
+            { "Camera shutter", "Camera_shutter" },
+            { "G U N", "G_U_N" },
+            { "Glass Breaking", "Glass_Breaking" },
         };
 
         internal static Dictionary<string, Sound.ID> SoundIDNameToSoundID { get; private set; } = new Dictionary<string, Sound.ID>()
         {
             { "None", Sound.ID.None },
+            { "Camera shutter", Sound.ID.Camera_shutter },
+            { "DelayedScribble", Sound.ID.DelayedScribble },
+            { "G U N", Sound.ID.G_U_N },
+            { "Glass Breaking", Sound.ID.Glass_Breaking },
             { "Move", Sound.ID.Move },
             { "PhotoDrag", Sound.ID.PhotoDrag },
             { "PhotoDrop", Sound.ID.PhotoDrop },
             { "Select", Sound.ID.Select },
             { "SlotHover", Sound.ID.SlotHover },
             { "Suspense_1_Loop", Sound.ID.Suspense_1_Loop },
+            { "Thud", Sound.ID.Thud },
             { "UIClick", Sound.ID.UIClick },
             { "UIClick2", Sound.ID.UIClick2 },
         };
