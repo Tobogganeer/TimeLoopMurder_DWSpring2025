@@ -1783,6 +1783,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4039659218230173908, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: m_Name
+      value: Journal Tab
+      objectReference: {fileID: 0}
     - target: {fileID: 5153390914703995541, guid: 619df69bf263acb43a8798c97132a69f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
