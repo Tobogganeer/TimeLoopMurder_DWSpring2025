@@ -25,6 +25,7 @@ public class Loop : MonoBehaviour
     int MinutesLeft => actionsLeft * minutesPerAction;
 
     public static int ActionsLeft => instance.actionsLeft;
+    public static float PercentActionsLeft => instance.actionsLeft / (float)instance.startingActions;
 
     private void Start()
     {
