@@ -10,7 +10,7 @@ public class TEMPStartMenu : MonoBehaviour
     private void Start()
     {
         // Pause timer until we start
-        FindObjectOfType<TimerLoop>().timerPaused = true;
+        FindObjectOfType<Loop>().timerPaused = true;
         if (shown)
             gameObject.SetActive(false);
         shown = true;
@@ -18,7 +18,7 @@ public class TEMPStartMenu : MonoBehaviour
 
     private void OnDisable()
     {
-        TimerLoop timer = FindObjectOfType<TimerLoop>();
+        Loop timer = FindObjectOfType<Loop>();
         if (timer)
             timer.timerPaused = false;
     }

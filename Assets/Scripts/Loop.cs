@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class TimerLoop : MonoBehaviour
+public class Loop : MonoBehaviour
 {
     public float targetLimit = 60.0f;
     public bool timerPaused = false;
