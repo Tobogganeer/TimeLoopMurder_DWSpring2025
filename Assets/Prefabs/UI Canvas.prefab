@@ -2555,6 +2555,7 @@ GameObject:
   - component: {fileID: 6366271544424560737}
   - component: {fileID: 5467704922621260450}
   - component: {fileID: 7341666541805855615}
+  - component: {fileID: 2611449526206610518}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -2678,6 +2679,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2611449526206610518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7935076754305318600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b82de51e3dbf1419d966d930f36aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingActions: 12
+  minutesPerAction: 5
+  startingMinutes: 60
+  timerText: {fileID: 7341666541805855615}
 --- !u!1 &8550866704690544484
 GameObject:
   m_ObjectHideFlags: 0

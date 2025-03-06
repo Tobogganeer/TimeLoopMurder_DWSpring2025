@@ -38,7 +38,7 @@ public class DialogueGUI : MonoBehaviour
     bool guiEnabled;
     NPC.ID currentNPC;
 
-    const float AlphaSpeed = 1f;
+    const float AlphaSpeed = 1.3f;
 
     public static bool Enabled => instance.guiEnabled;
     public static NPC CurrentNPC => instance.npcDict[instance.currentNPC];
@@ -99,11 +99,14 @@ public class DialogueGUI : MonoBehaviour
         instance.buttonEvidenceTypes.Clear();
     }
 
-    public static void AddChoice(string text, Action callback, EvidenceObject.Type type = EvidenceObject.Type.None)
+    public static void AddChoice(string text, Action callback, EvidenceObject.Type type = EvidenceObject.Type.None, bool takesAnAction = true)
     {
         // Spawn button, set callback when clicked, set text
         Button button = Instantiate(instance.choiceButtonPrefab, instance.choiceContainer).GetComponent<Button>();
         button.onClick.AddListener(() => callback?.Invoke());
+        if (takesAnAction)
+            button.onClick.AddListener(() => Loop.TakeAction());
+
         button.transform.GetChild(0).GetComponent<TMPro.TMP_Text>().text = text;
         instance.choiceButtons.Add(button);
         instance.buttonEvidenceTypes.Add(type);
@@ -117,7 +120,7 @@ public class DialogueGUI : MonoBehaviour
         {
             ClearChoices();
             AddDefaultChoices();
-        });
+        }, EvidenceObject.Type.None, false);
     }
 
     public static void AddDefaultChoices()

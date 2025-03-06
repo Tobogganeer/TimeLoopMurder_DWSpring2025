@@ -52,6 +52,8 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         // Check to see if we've been collected
         if (!addedToPhotos)
         {
+            Loop.TakeAction();
+
             capturedEvidence.Add(type);
             addedToPhotos = true;
             Sound.Select.Play2D();
