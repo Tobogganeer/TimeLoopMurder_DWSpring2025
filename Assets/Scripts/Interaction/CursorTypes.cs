@@ -46,9 +46,11 @@ public enum CursorType
 {
     Default,
     InteractHand,
+    Speak,
+    QuestionMark,
+    Camera,
+    DownArrow,
     LeftArrow,
     RightArrow,
-    DownArrow,
-    UpArrow,
-    Lock
+    UpArrow
 }

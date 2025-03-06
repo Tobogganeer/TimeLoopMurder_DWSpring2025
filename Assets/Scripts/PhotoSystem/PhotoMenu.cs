@@ -15,7 +15,7 @@ public class PhotoMenu : MonoBehaviour
 
     const float RotationRange = 10f;
     
-    public static Photo AddPhoto(EvidenceObject.Type type, Texture2D capturedImage)
+    public static Photo AddPhoto(EvidenceObject.Type type)
     {
         // Spawn new photo with slight random rotation
         GameObject newPhotoObject = Instantiate(instance.photoPrefab, Vector3.zero,
@@ -24,7 +24,7 @@ public class PhotoMenu : MonoBehaviour
         newPhotoObject.transform.SetParent(instance.photoHolder, false);
 
         Photo photo = newPhotoObject.GetComponent<Photo>();
-        photo.Init(type, capturedImage);
+        photo.Init(type);
         return photo;
     }
 }
