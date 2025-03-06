@@ -13,7 +13,10 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         Fireplace,
         GunCabinet,
         Rug,
-        None
+        None,
+        Safe,
+        OldWill,
+        ChangedWill
     }
 
 
@@ -99,6 +102,9 @@ public static class EvidenceTypeExtensions
         EvidenceObject.Type.Fireplace => "\"What do you know about the fireplace?\"",
         EvidenceObject.Type.GunCabinet => "\"Can you reach the top of the gun cabinet?\"",
         EvidenceObject.Type.Rug => "\"Did you scuff the rug?\"",
+        EvidenceObject.Type.Safe => "\"Do you know how to get into the safe?\"",
+        EvidenceObject.Type.OldWill => "\"Doesn't Dad have a will?\"",
+        EvidenceObject.Type.ChangedWill => "\"Do you know that Dad is changing his will?\"",
         _ => throw new System.NotImplementedException(),
     };
 }
