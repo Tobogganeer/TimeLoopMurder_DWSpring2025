@@ -17,6 +17,9 @@ public class Photo : MonoBehaviour, IInteractable
 
     static bool anyPhotoPickedUpYet;
 
+    const float StartScale = 0.8f;
+    const float ShrinkSpeed = 3f;
+
     public void Init(EvidenceObject.Type type)
     {
         this.type = type;
@@ -39,8 +42,15 @@ public class Photo : MonoBehaviour, IInteractable
         }
     }
 
+    private void Start()
+    {
+        transform.localScale = Vector3.one * StartScale;
+    }
+
     private void Update()
     {
+        transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, Time.deltaTime * ShrinkSpeed);
+
         if (dragging && Mouse.current.leftButton.wasReleasedThisFrame)
         {
             dragging = false;
