@@ -99,7 +99,7 @@ public class DialogueGUI : MonoBehaviour
         instance.buttonEvidenceTypes.Clear();
     }
 
-    public static void AddChoice(string text, Action callback, EvidenceObject.Type type = EvidenceObject.Type.None, bool takesAnAction = true)
+    public static void AddChoice(string text, Action callback, bool takesAnAction = true, EvidenceObject.Type type = EvidenceObject.Type.None)
     {
         // Spawn button, set callback when clicked, set text
         Button button = Instantiate(instance.choiceButtonPrefab, instance.choiceContainer).GetComponent<Button>();
@@ -120,12 +120,12 @@ public class DialogueGUI : MonoBehaviour
         {
             ClearChoices();
             AddDefaultChoices();
-        }, EvidenceObject.Type.None, false);
+        }, false);
     }
 
     public static void AddDefaultChoices()
     {
-        AddChoice("\"Goodbye.\"", () => Speak(CurrentNPC.id, NPC.DialogueType.Farewell, false), EvidenceObject.Type.None, false);
+        AddChoice("\"Goodbye.\"", () => Speak(CurrentNPC.id, NPC.DialogueType.Farewell, false), false);
         AddChoice("\"How do you know my dad?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.HowDoYouKnowMyDad));
         AddChoice("\"What are you doing?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhatAreYouDoing));
         AddChoice("\"Why are you here?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhyAreYouHere));
