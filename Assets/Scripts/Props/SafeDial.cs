@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using Tobo.Audio;
 
 public class SafeDial : MonoBehaviour, IInteractable
 {
@@ -12,6 +13,9 @@ public class SafeDial : MonoBehaviour, IInteractable
     public int maxNumber = 39;
     public float dialRotation = 125f;
 
+    [Space]
+    public string correctCombo = "1635";
+
     bool dragging;
 
     int leftNumber;
@@ -19,6 +23,8 @@ public class SafeDial : MonoBehaviour, IInteractable
 
     float mouseDelta;
     Vector2 oldMousePos;
+
+    public string CurrentCombo => leftNumber.ToString().PadLeft(2, '0') + rightNumber.ToString().PadLeft(2, '0');
 
     public void OnClicked()
     {
@@ -48,6 +54,9 @@ public class SafeDial : MonoBehaviour, IInteractable
         else
             rightNumber += numTicks;
 
+        if (numTicks > 0)
+            Sound.SlotHover.Play2D();
+
         // Reset mouseDelta
         mouseDelta -= (numTicks * pixelThreshold * sign);
 
@@ -65,5 +74,17 @@ public class SafeDial : MonoBehaviour, IInteractable
 
         leftNumberText.text = leftNumber.ToString().PadLeft(2, '0');
         rightNumberText.text = rightNumber.ToString().PadLeft(2, '0');
+
+        CheckForCorrectCombo();
+    }
+
+    void CheckForCorrectCombo()
+    {
+        if (CurrentCombo == correctCombo)
+        {
+            // Stop input
+            dragging = false;
+            Sound.UIClick2.Play2D();
+        }
     }
 }
