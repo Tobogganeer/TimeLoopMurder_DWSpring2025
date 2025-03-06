@@ -32,6 +32,7 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
 
 
     static Dictionary<Type, EvidenceObject> allEvidence = new Dictionary<Type, EvidenceObject>();
+    static HashSet<Type> capturedEvidence = new HashSet<Type>();
 
     private void OnEnable()
     {
@@ -51,10 +52,25 @@ public class EvidenceObject : MonoBehaviour, IInteractable, ICustomCursor
         // Check to see if we've been collected
         if (!addedToPhotos)
         {
+            capturedEvidence.Add(type);
             addedToPhotos = true;
             Sound.Select.Play2D();
-            capturedImage = PhotoCamera.TakePhoto(this);
-            PhotoMenu.AddPhoto(type);
+            AddToPhotoMenu();
+        }
+    }
+
+    public void AddToPhotoMenu()
+    {
+        capturedImage = PhotoCamera.TakePhoto(this);
+        PhotoMenu.AddPhoto(type);
+    }
+
+    public static void LoadPhotosFromLastLoop()
+    {
+        foreach (Type type in capturedEvidence)
+        {
+            allEvidence[type].addedToPhotos = true;
+            allEvidence[type].AddToPhotoMenu();
         }
     }
 

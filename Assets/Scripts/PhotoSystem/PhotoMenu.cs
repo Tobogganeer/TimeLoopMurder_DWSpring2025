@@ -14,7 +14,12 @@ public class PhotoMenu : MonoBehaviour
     public Transform photoHolder;
 
     const float RotationRange = 10f;
-    
+
+    private void Start()
+    {
+        EvidenceObject.LoadPhotosFromLastLoop();
+    }
+
     public static Photo AddPhoto(EvidenceObject.Type type)
     {
         // Spawn new photo with slight random rotation

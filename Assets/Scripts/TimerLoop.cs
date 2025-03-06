@@ -13,7 +13,7 @@ public class TimerLoop : MonoBehaviour
 
     public void Update()
     {
-        timer.SetText(targetLimit.ToString());
+        timer.SetText(Mathf.RoundToInt(targetLimit).ToString());
 
         if (!timerPaused)
         {
