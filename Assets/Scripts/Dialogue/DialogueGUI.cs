@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class DialogueGUI : MonoBehaviour
 {
+    // This code is atrocious
+    // Sorry to whoever has to deal with it in the future (me)
+
     private static DialogueGUI instance;
     private void Awake()
     {
@@ -79,7 +82,7 @@ public class DialogueGUI : MonoBehaviour
         if (line != null)
             Speak(npc, line.respondWith, addDefaultChoices);
         else
-            Speak(npc, "No response.", addDefaultChoices);
+            Speak(npc, "(No response yet)", addDefaultChoices);
     }
 
     public static void ClearChoices()

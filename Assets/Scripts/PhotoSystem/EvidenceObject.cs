@@ -78,7 +78,7 @@ public static class EvidenceTypeExtensions
         EvidenceObject.Type.Footprints => "\"What shoes are you wearing?\"",
         EvidenceObject.Type.Plant => "\"Are you strong enough to move the potted plant?\"",
         EvidenceObject.Type.Fireplace => "\"What do you know about the fireplace?\"",
-        EvidenceObject.Type.GunCabinet => "\"Can you reach the top of the gub cabinet?\"",
+        EvidenceObject.Type.GunCabinet => "\"Can you reach the top of the gun cabinet?\"",
         EvidenceObject.Type.Rug => "\"Did you scuff the rug?\"",
         _ => throw new System.NotImplementedException(),
     };
