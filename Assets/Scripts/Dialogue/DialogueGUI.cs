@@ -83,6 +83,12 @@ public class DialogueGUI : MonoBehaviour
             Speak(npc, line.respondWith, addDefaultChoices);
         else
             Speak(npc, "(No response yet)", addDefaultChoices);
+
+        // TODO: Remove after demo
+        if (npc == NPC.ID.Butler && evidence == EvidenceObject.Type.Footprints)
+        {
+            PopUp.Show("Using photos to question the 4 NPCs is how you'll solve the first puzzle.");
+        }
     }
 
     public static void ClearChoices()

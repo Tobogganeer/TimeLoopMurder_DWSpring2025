@@ -15,6 +15,8 @@ public class Photo : MonoBehaviour, IInteractable
 
     bool dragging;
 
+    static bool anyPhotoPickedUpYet;
+
     public void Init(EvidenceObject.Type type)
     {
         this.type = type;
@@ -28,6 +30,13 @@ public class Photo : MonoBehaviour, IInteractable
         dragging = true;
         DraggedPhotoGUI.Enable(this);
         Sound.PhotoDrag.Play2D();
+
+        // First time picking up pic - give a little tutorial
+        if (!anyPhotoPickedUpYet)
+        {
+            anyPhotoPickedUpYet = true;
+            PopUp.Show("Drag a photo to an NPC to ask them about it");
+        }
     }
 
     private void Update()
