@@ -51,3 +51,12 @@ MonoBehaviour:
     respondWith: No, I didn't. I prefer to keep things neat, being a perfectionist
       myself. If I was in there and saw that rug looking like it, I would fix it
       right away.
+  - whenShown: 6
+    respondWith: What safe? Is your father hiding any secrets from me that he doesn't
+      want me to know? If so, he's probably afraid of me. Everyone who's against
+      me is.
+  - whenShown: 7
+    respondWith: I've never been informed of his will.
+  - whenShown: 8
+    respondWith: No, your father hasn't told me anything like that. Hopefully he's
+      changing it so that I can get his company, though.

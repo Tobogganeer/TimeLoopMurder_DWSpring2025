@@ -45,3 +45,9 @@ MonoBehaviour:
   - whenShown: 4
     respondWith: Oh, I don't know about that. I might've tripped on it without paying
       attention to what I was doing, but I honestly couldn't tell you.
+  - whenShown: 6
+    respondWith: Sorry dear, but no. Only your father knows.
+  - whenShown: 7
+    respondWith: Of course he does. I told you about his will before, haven't I?
+  - whenShown: 8
+    respondWith: I'm the first one he told.
