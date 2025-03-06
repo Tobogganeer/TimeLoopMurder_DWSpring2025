@@ -125,7 +125,7 @@ public class DialogueGUI : MonoBehaviour
 
     public static void AddDefaultChoices()
     {
-        AddChoice("\"Goodbye.\"", () => Speak(CurrentNPC.id, NPC.DialogueType.Farewell, false));
+        AddChoice("\"Goodbye.\"", () => Speak(CurrentNPC.id, NPC.DialogueType.Farewell, false), EvidenceObject.Type.None, false);
         AddChoice("\"How do you know my dad?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.HowDoYouKnowMyDad));
         AddChoice("\"What are you doing?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhatAreYouDoing));
         AddChoice("\"Why are you here?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhyAreYouHere));
