@@ -48,3 +48,23 @@ public class NPC : ScriptableObject
         Mistress
     }
 }
+
+public static class NPCIDExtensions
+{
+    public static string GetName(this NPC.ID id) => id switch
+    {
+        NPC.ID.Dad => "Jeremias",
+        NPC.ID.Mom => "Zephyer",
+        NPC.ID.Butler => "Yorick",
+        NPC.ID.Investor => "Lysander",
+        NPC.ID.Mistress => "Kensington",
+        _ => throw new System.NotImplementedException(),
+    };
+
+    /*
+    DialogueGUI.AddChoice("Accuse Lysander", () => Accuse(NPC.ID.Investor), false);
+    DialogueGUI.AddChoice("Accuse Kensington", () => Accuse(NPC.ID.Mistress), false);
+    DialogueGUI.AddChoice("Accuse Yorick", () => Accuse(NPC.ID.Butler), false);
+    DialogueGUI.AddChoice("Accuse Zephyer", () => Accuse(NPC.ID.Mom), false);
+    */
+}

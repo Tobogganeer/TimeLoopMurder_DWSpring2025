@@ -109,4 +109,30 @@ public static class EvidenceTypeExtensions
         EvidenceObject.Type.ChangedWill => "\"Do you know that Dad is changing his will?\"",
         _ => throw new System.NotImplementedException(),
     };
+
+    public static string GetDadMotiveComment(this EvidenceObject.Type type) => type switch
+    {
+        EvidenceObject.Type.Footprints => "Because my floors are dirty?",
+        EvidenceObject.Type.Plant => "Because of that plant",
+        EvidenceObject.Type.Fireplace => "Because of my fireplace?",
+        EvidenceObject.Type.GunCabinet => "Because of my guns?",
+        EvidenceObject.Type.Rug => "Because of my rug?",
+        EvidenceObject.Type.Safe => "Because of something in my safe?",
+        EvidenceObject.Type.OldWill => "The will on my desk? That isn't even current...",
+        EvidenceObject.Type.ChangedWill => "The changes I made to my will? Actually...",
+        _ => throw new System.NotImplementedException(),
+    };
+
+    public static string GetDadMeansComment(this EvidenceObject.Type type) => type switch
+    {
+        EvidenceObject.Type.Footprints => "Step on me?",
+        EvidenceObject.Type.Plant => "Hit me with a plant?",
+        EvidenceObject.Type.Fireplace => "Burn me alive?",
+        EvidenceObject.Type.GunCabinet => "Someone broke into my gun cabinet?",
+        EvidenceObject.Type.Rug => "What? Hit me with... a rug?",
+        EvidenceObject.Type.Safe => "There isn't anything in my safe that could hurt me?",
+        EvidenceObject.Type.OldWill => "Are they going to tear up my will?",
+        EvidenceObject.Type.ChangedWill => "What, are they going to wait until I drop dead? Hah.",
+        _ => throw new System.NotImplementedException(),
+    };
 }

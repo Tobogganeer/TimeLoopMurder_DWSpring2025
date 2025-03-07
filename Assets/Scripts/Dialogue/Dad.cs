@@ -18,6 +18,9 @@ public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidence
     }
 
     State state;
+    NPC.ID accusedNPC;
+    EvidenceObject.Type guessedMotive;
+    EvidenceObject.Type guessedMeans;
 
     // Show the question mark icon if we are holding evidence
     CursorType ICustomCursor.GetCursorType() =>
@@ -38,25 +41,62 @@ public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidence
 
     public void HandleEvidence(EvidenceObject.Type type)
     {
-        DialogueGUI.Speak(NPC.ID.Dad, "What's that, kiddo?", false);
-        DialogueGUI.AddChoice("Warn him", () => WarnDad(), false);
-        DialogueGUI.AddChoice("\"Goodbye.\"", () => DialogueGUI.Speak(NPC.ID.Dad, "Oh, ok.", false), false);
+        switch (state)
+        {
+            // We are just talking - let the player start accusing
+            case State.Speaking:
+                DialogueGUI.Speak(NPC.ID.Dad, "What's that, kiddo?", false);
+                DialogueGUI.AddChoice("Warn him", () => WarnDad(), false);
+                DialogueGUI.AddChoice("\"Goodbye.\"", () => DialogueGUI.Speak(NPC.ID.Dad, "Oh, ok.", false), false);
+                break;
+            case State.WaitingForMotive:
+                HandleMotive(type);
+                break;
+            case State.WaitingForMeans:
+                HandleMeans(type);
+                break;
+            default:
+                break;
+        }
+        
     }
 
     void WarnDad()
     {
         DialogueGUI.AddBackChoice();
-        DialogueGUI.AddChoice("Accuse Lysander", () => Accuse(NPC.ID.Investor));
-        DialogueGUI.AddChoice("Accuse Kensington", () => Accuse(NPC.ID.Mistress));
-        DialogueGUI.AddChoice("Accuse Yorick", () => Accuse(NPC.ID.Butler));
-        DialogueGUI.AddChoice("Accuse Zephyer", () => Accuse(NPC.ID.Mom));
+        DialogueGUI.AddChoice("Accuse Lysander", () => Accuse(NPC.ID.Investor), false);
+        DialogueGUI.AddChoice("Accuse Kensington", () => Accuse(NPC.ID.Mistress), false);
+        DialogueGUI.AddChoice("Accuse Yorick", () => Accuse(NPC.ID.Butler), false);
+        DialogueGUI.AddChoice("Accuse Zephyer", () => Accuse(NPC.ID.Mom), false);
     }
 
     void Accuse(NPC.ID npc)
     {
         state = State.WaitingForMotive;
+        accusedNPC = npc;
 
-        DialogueGUI.Speak(NPC.ID.Dad, "Why? [drag evidence]", false);
-        DialogueGUI.AddBackChoice();
+        DialogueGUI.Speak(NPC.ID.Dad, npc.GetName() + "? Why? [drag evidence]", false);
+        AddNevermindChoice();
+        // Player then drags in evidence
+    }
+
+    void HandleMotive(EvidenceObject.Type evidence)
+    {
+        guessedMotive = evidence;
+        DialogueGUI.Speak(NPC.ID.Dad, evidence.GetDadMotiveComment() + " What are they going to do? [drag evidence]", false);
+        AddNevermindChoice();
+    }
+
+    void HandleMeans(EvidenceObject.Type evidence)
+    {
+        guessedMeans = evidence;
+        DialogueGUI.Speak(NPC.ID.Dad, evidence.GetDadMeansComment() + " Let me look into this.", false);
+        Loop.EndLoop(accusedNPC == NPC.ID.Butler && guessedMotive ==
+            EvidenceObject.Type.ChangedWill && guessedMeans == EvidenceObject.Type.GunCabinet); // End loop - see what happens
+    }
+
+    void AddNevermindChoice()
+    {
+        DialogueGUI.AddChoice("\"..Nevermind\"", () => DialogueGUI.Speak(NPC.ID.Dad, "Oh, ok.", false), false);
     }
 }

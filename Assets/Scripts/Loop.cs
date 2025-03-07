@@ -25,6 +25,8 @@ public class Loop : MonoBehaviour
     public static int ActionsLeft => instance.actionsLeft;
     public static float PercentActionsLeft => instance.actionsLeft / (float)instance.startingActions;
 
+    bool endingIsRunning;
+
     private void Start()
     {
         actionsLeft = startingActions;
@@ -35,17 +37,30 @@ public class Loop : MonoBehaviour
         instance.actionsLeft--;
 
         if (instance.actionsLeft <= 0)
-            instance.LoopEnded();
+            instance.LoopEnded(false);
     }
 
-    void LoopEnded()
+    public void LoopEnded(bool victory)
     {
         // Disable interaction. It will be re-enabled when the scene is reset
         // Note: This doesn't disable the pause menu and buttons (they don't use the Interaction system)
         Interactor.Enabled = false;
 
+        if (!endingIsRunning)
+            StartCoroutine(EndLoopCoroutine(victory));
+    }
+
+    IEnumerator EndLoopCoroutine(bool victory)
+    {
+        endingIsRunning = true;
+
         // TODO: Show cutscene before reload
         SceneManager.LoadScene("InteractionDemo");
+    }
+
+    public static void EndLoop(bool victory)
+    {
+        instance.LoopEnded(victory);
     }
 
     private void OnValidate()
