@@ -128,9 +128,9 @@ namespace Tobo.Audio
             PlayAudio(sound.GetAudio().SetPosition(position).SetParent(parent));
         }
 
-        public static void Play2D(Sound sound)
+        public static PooledAudioSource Play2D(Sound sound)
         {
-            PlayAudio(sound.GetAudio().Set2D());
+            return PlayAudio(sound.GetAudio().Set2D());
         }
 
         public static void Play(Sound.ID soundID, Vector3 position, Transform parent = null)
@@ -164,7 +164,7 @@ namespace Tobo.Audio
         }
         #endregion
 
-        public static void PlayAudio(Audio audio)
+        public static PooledAudioSource PlayAudio(Audio audio)
         {
             // Send over network
 #if TOBO_NET
@@ -177,10 +177,10 @@ namespace Tobo.Audio
 #endif
 
             // Play on our side
-            PlayAudioLocal(audio);
+            return PlayAudioLocal(audio);
         }
 
-        public static void PlayAudioLocal(Audio audio)
+        public static PooledAudioSource PlayAudioLocal(Audio audio)
         {
             if (!soundsDictionary.TryGetValue(audio.ID, out Sound sound))
             {
@@ -188,7 +188,7 @@ namespace Tobo.Audio
             }
 
             if (sound.SoundID == Sound.ID.None)
-                return;
+                return null;
 
             if (sound.Clips == null || sound.Clips.Length == 0)
             {
@@ -198,7 +198,7 @@ namespace Tobo.Audio
             if (audio.ClipIndex < 0 || audio.ClipIndex >= sound.Clips.Length)
             {
                 Debug.LogWarning($"Clip (index: {audio.ClipIndex}) was outside range for Sound.ID {audio.ID} (sound has {sound.Clips.Length} registered clips).");
-                return;
+                return null;
             }
 
             GameObject sourceObj = AudioMaster.GetAudioSource();
@@ -208,7 +208,7 @@ namespace Tobo.Audio
                 // Parent is turned off
                 Debug.Log($"Skipping audio played on disabled parent ({audio.Parent.name})");
                 sourceObj.SetActive(false);
-                return;
+                return null;
             }
 
             sourceObj.transform.SetParent(audio.Parent);
@@ -227,6 +227,7 @@ namespace Tobo.Audio
             source.Play();
 
             sourceObj.GetComponent<PooledAudioSource>().DisableAfterTime(source.clip.length / audio.Pitch + 0.25f); // 0.25 seconds extra for good measure
+            return sourceObj.GetComponent<PooledAudioSource>();
         }
 
         public static void OnNetworkAudio(Audio audio)

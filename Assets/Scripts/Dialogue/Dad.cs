@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Tobo.Audio;
 using UnityEngine;
 
 public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidenceDroppedOnMe
@@ -17,6 +18,8 @@ public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidence
         WaitingForMeans,
     }
 
+    PooledAudioSource suspenseTheme;
+
     State state;
     NPC.ID accusedNPC;
     EvidenceObject.Type guessedMotive;
@@ -29,6 +32,7 @@ public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidence
     public void OnClicked()
     {
         state = State.Speaking;
+        suspenseTheme = null;
 
         DialogueGUI.Speak(NPC.ID.Dad, NPC.DialogueType.Greeting, false);
         // Goodbye
@@ -63,6 +67,7 @@ public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidence
 
     void WarnDad()
     {
+        suspenseTheme = Sound.Suspense_1_Loop.Play2D();
         DialogueGUI.ClearChoices();
         //DialogueGUI.AddBackChoice();
         AddNevermindChoice();
@@ -100,6 +105,12 @@ public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidence
 
     void AddNevermindChoice()
     {
-        DialogueGUI.AddChoice("\"..Nevermind\"", () => DialogueGUI.Speak(NPC.ID.Dad, "Oh, ok.", false), false);
+        DialogueGUI.AddChoice("\"..Nevermind\"", () =>
+        {
+            DialogueGUI.Speak(NPC.ID.Dad, "Oh, ok.", false);
+            if (suspenseTheme != null)
+                suspenseTheme.gameObject.SetActive(false);
+        }
+        , false);
     }
 }

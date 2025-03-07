@@ -72,9 +72,9 @@ namespace Tobo.Audio
             AudioManager.Play(this, position);
         }
 
-        public void Play2D()
+        public PooledAudioSource Play2D()
         {
-            AudioManager.Play2D(this);
+            return AudioManager.Play2D(this);
         }
 
 #if TOBO_NET
