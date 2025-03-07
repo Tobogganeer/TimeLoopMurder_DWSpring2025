@@ -54,6 +54,7 @@ public class Loop : MonoBehaviour
     {
         endingIsRunning = true;
 
+        yield return null;
         // TODO: Show cutscene before reload
         SceneManager.LoadScene("InteractionDemo");
     }

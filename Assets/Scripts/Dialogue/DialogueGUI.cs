@@ -24,6 +24,7 @@ public class DialogueGUI : MonoBehaviour
     public Image portrait;
     public TMPro.TMP_Text spokenLineText;
     public Transform choiceContainer;
+    public TMPro.TMP_Text characterNameText;
 
     [Space]
     public GameObject choiceButtonPrefab;
@@ -53,6 +54,7 @@ public class DialogueGUI : MonoBehaviour
         // Show character
         instance.portrait.sprite = instance.npcDict[npc].headshot;
         instance.currentNPC = npc;
+        instance.characterNameText.text = npc.GetName();
     }
 
     public static void Disable()

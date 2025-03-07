@@ -63,7 +63,9 @@ public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidence
 
     void WarnDad()
     {
-        DialogueGUI.AddBackChoice();
+        DialogueGUI.ClearChoices();
+        //DialogueGUI.AddBackChoice();
+        AddNevermindChoice();
         DialogueGUI.AddChoice("Accuse Lysander", () => Accuse(NPC.ID.Investor), false);
         DialogueGUI.AddChoice("Accuse Kensington", () => Accuse(NPC.ID.Mistress), false);
         DialogueGUI.AddChoice("Accuse Yorick", () => Accuse(NPC.ID.Butler), false);
@@ -82,6 +84,7 @@ public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidence
 
     void HandleMotive(EvidenceObject.Type evidence)
     {
+        state = State.WaitingForMeans;
         guessedMotive = evidence;
         DialogueGUI.Speak(NPC.ID.Dad, evidence.GetDadMotiveComment() + " What are they going to do? [drag evidence]", false);
         AddNevermindChoice();
