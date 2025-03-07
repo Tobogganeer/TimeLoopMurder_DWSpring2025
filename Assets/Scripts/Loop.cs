@@ -60,6 +60,7 @@ public class Loop : MonoBehaviour
         // Wait longer if we accused someone (so we have time to read dad's comments)
         yield return new WaitForSeconds(accusedSomeone ? accusedSomeoneWaitTime : ranOutOfActionsWaitTime);
 
+        blackScreen.gameObject.SetActive(true);
         blackScreen.DOFade(1f, fadeTime);
 
         // Wait on a black screen for a second
