@@ -4,12 +4,29 @@ using UnityEngine;
 
 public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidenceDroppedOnMe
 {
+    public static Dad instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    enum State
+    {
+        Speaking,
+        WaitingForMotive,
+        WaitingForMeans,
+    }
+
+    State state;
+
     // Show the question mark icon if we are holding evidence
     CursorType ICustomCursor.GetCursorType() =>
         DraggedPhotoGUI.CurrentlyHoldingEvidence ? CursorType.QuestionMark : CursorType.Speak;
 
     public void OnClicked()
     {
+        state = State.Speaking;
+
         DialogueGUI.Speak(NPC.ID.Dad, NPC.DialogueType.Greeting, false);
         // Goodbye
         DialogueGUI.AddChoice("\"Goodbye.\"", () => DialogueGUI.Speak(NPC.ID.Dad, NPC.DialogueType.Farewell, false), false);
@@ -37,6 +54,9 @@ public class Dad : MonoBehaviour, ICustomCursor, IInteractable, ICanHaveEvidence
 
     void Accuse(NPC.ID npc)
     {
+        state = State.WaitingForMotive;
 
+        DialogueGUI.Speak(NPC.ID.Dad, "Why? [drag evidence]", false);
+        DialogueGUI.AddBackChoice();
     }
 }
