@@ -20,7 +20,8 @@ public class NPC : ScriptableObject
         WhyAreYouHere,
         WhatAreYouDoing,
         HowDoYouKnowMyDad,
-        Farewell
+        Farewell,
+        WhatAreYouDoingTonight
     }
 
     [System.Serializable]

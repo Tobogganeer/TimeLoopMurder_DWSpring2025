@@ -4409,6 +4409,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4986257228292267603, guid: 619df69bf263acb43a8798c97132a69f,
+        type: 3}
+      propertyPath: blackScreen
+      value: 
+      objectReference: {fileID: 1543675477}
     - target: {fileID: 5201554312974976651, guid: 619df69bf263acb43a8798c97132a69f,
         type: 3}
       propertyPath: m_AnchorMax.y

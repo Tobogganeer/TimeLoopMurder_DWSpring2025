@@ -33,6 +33,11 @@ MonoBehaviour:
   - whenAsked: 4
     respondWith: I hope I get to talk to you again later. I still haven't told you
       about all of my successes. They're HUGE successes.
+  - whenAsked: 5
+    respondWith: Next to the booze, tryna chat your dad into breaking a deal with
+      me, obviously! I'm not some lily-livered coward who gives up chasing the BIGGEST
+      opportunity of his life! The money made offa this deal will be huge, I'm tellin'
+      ya.
   evidenceResponses:
   - whenShown: 2
     respondWith: Oh yes, it's that fireplace in that room. It's obviously not as

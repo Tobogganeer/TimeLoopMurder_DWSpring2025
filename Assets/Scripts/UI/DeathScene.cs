@@ -56,6 +56,6 @@ public class DeathScene : MonoBehaviour
         stopWatch.DOFade(0f, 1f);
         yield return new WaitForSeconds(1.5f);
 
-        SceneManager.LoadScene("InteractionDemo");
+        SceneManager.LoadScene("GameScene");
     }
 }

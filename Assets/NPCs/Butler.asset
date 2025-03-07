@@ -26,6 +26,9 @@ MonoBehaviour:
       can see, I'm quite busy at the moment.
   - whenAsked: 4
     respondWith: Goodbye for now.
+  - whenAsked: 5
+    respondWith: I shall be in the kitchen, preparing delicacies for tonight's party
+      and tidying up used dishes.
   evidenceResponses:
   - whenShown: 2
     respondWith: I've cleaned the fireplace upon numerous times since I've worked

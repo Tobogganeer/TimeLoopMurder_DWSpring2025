@@ -131,6 +131,7 @@ public class DialogueGUI : MonoBehaviour
         AddChoice("\"How do you know my dad?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.HowDoYouKnowMyDad));
         AddChoice("\"What are you doing?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhatAreYouDoing));
         AddChoice("\"Why are you here?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhyAreYouHere));
+        AddChoice("\"What are you doing later?\"", () => Speak(CurrentNPC.id, NPC.DialogueType.WhatAreYouDoingTonight));
     }
 
     private void Update()

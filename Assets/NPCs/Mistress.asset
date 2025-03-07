@@ -25,6 +25,9 @@ MonoBehaviour:
     respondWith: Your mom invited me over.
   - whenAsked: 4
     respondWith: Bye.
+  - whenAsked: 5
+    respondWith: Nosey kid. If you must know, I'm not staying for long. I just want
+      to privately chat with your mother and then I'll quickly be on my way.
   evidenceResponses:
   - whenShown: 2
     respondWith: I don't know anything about it other than the fact that it's a fireplace.

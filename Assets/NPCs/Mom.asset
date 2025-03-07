@@ -31,6 +31,9 @@ MonoBehaviour:
       good hostess.
   - whenAsked: 4
     respondWith: Take care, sweetie! Love you!
+  - whenAsked: 5
+    respondWith: I'll be in the dining room, entertaining the guests dear! It's what
+      any good hostess would do.
   evidenceResponses:
   - whenShown: 2
     respondWith: Well, I know how much you love being close to it for warmth every
