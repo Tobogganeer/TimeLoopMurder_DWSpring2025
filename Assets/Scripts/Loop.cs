@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using Tobo.Attributes;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class Loop : MonoBehaviour
 {
@@ -14,13 +16,14 @@ public class Loop : MonoBehaviour
     }
 
     public int startingActions = 12;
-    public int minutesPerAction = 5;
 
-    [ReadOnly, SerializeField] // Only used to show in inspector
-    private int startingMinutes;
+    [Space]
+    public float ranOutOfActionsWaitTime = 2f;
+    public float accusedSomeoneWaitTime = 5f;
+    public float fadeTime = 1f;
+    public Image blackScreen;
 
     int actionsLeft;
-    int MinutesLeft => actionsLeft * minutesPerAction;
 
     public static int ActionsLeft => instance.actionsLeft;
     public static float PercentActionsLeft => instance.actionsLeft / (float)instance.startingActions;
@@ -37,35 +40,49 @@ public class Loop : MonoBehaviour
         instance.actionsLeft--;
 
         if (instance.actionsLeft <= 0)
-            instance.LoopEnded(false);
+            instance.LoopEnded(false, false);
     }
 
-    public void LoopEnded(bool victory)
+    public void LoopEnded(bool victory, bool accusedSomeone)
     {
         // Disable interaction. It will be re-enabled when the scene is reset
         // Note: This doesn't disable the pause menu and buttons (they don't use the Interaction system)
         Interactor.Enabled = false;
 
         if (!endingIsRunning)
-            StartCoroutine(EndLoopCoroutine(victory));
+            StartCoroutine(EndLoopCoroutine(victory, accusedSomeone));
     }
 
-    IEnumerator EndLoopCoroutine(bool victory)
+    IEnumerator EndLoopCoroutine(bool victory, bool accusedSomeone)
     {
         endingIsRunning = true;
 
-        yield return null;
+        // Wait longer if we accused someone (so we have time to read dad's comments)
+        yield return new WaitForSeconds(accusedSomeone ? accusedSomeoneWaitTime : ranOutOfActionsWaitTime);
+
+        blackScreen.DOFade(1f, fadeTime);
+
+        // Wait on a black screen for a second
+        yield return new WaitForSeconds(fadeTime + 1f);
+
+        if (victory)
+        {
+            SceneManager.LoadScene("VictoryScene");
+            // TODO: Play police sounds after scene loaded
+        }
+        else
+        {
+            // Lazy approach
+            SceneManager.LoadScene("DeathScene");
+        }
+
+        //yield return null;
         // TODO: Show cutscene before reload
-        SceneManager.LoadScene("InteractionDemo");
+        //SceneManager.LoadScene("InteractionDemo");
     }
 
     public static void EndLoop(bool victory)
     {
-        instance.LoopEnded(victory);
-    }
-
-    private void OnValidate()
-    {
-        startingMinutes = startingActions * minutesPerAction;
+        instance.LoopEnded(victory, true);
     }
 }

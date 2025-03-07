@@ -17,7 +17,7 @@ public class PhotoMenu : MonoBehaviour
 
     private void Start()
     {
-        EvidenceObject.LoadPhotosFromLastLoop();
+        //EvidenceObject.LoadPhotosFromLastLoop();
     }
 
     public static Photo AddPhoto(EvidenceObject.Type type)
