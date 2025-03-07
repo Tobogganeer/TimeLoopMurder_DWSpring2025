@@ -745,6 +745,96 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 1761078591963585918, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761078591963585918, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761078591963585918, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761078591963585918, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761078591963585918, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761078591963585918, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168244909747123742, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168244909747123742, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168244909747123742, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168244909747123742, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168244909747123742, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168244909747123742, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440689258662210040, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440689258662210040, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440689258662210040, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440689258662210040, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440689258662210040, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440689258662210040, guid: 35244a98f68a7754c99f3ae56c5ab19c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5119869414819801484, guid: 35244a98f68a7754c99f3ae56c5ab19c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -851,11 +941,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5119869414819801484, guid: 35244a98f68a7754c99f3ae56c5ab19c,
         type: 3}
       insertIndex: 0
-      addedObject: {fileID: 342648902}
+      addedObject: {fileID: 79231993}
     - targetCorrespondingSourceObject: {fileID: 5119869414819801484, guid: 35244a98f68a7754c99f3ae56c5ab19c,
         type: 3}
       insertIndex: 1
-      addedObject: {fileID: 79231993}
+      addedObject: {fileID: 342648902}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 926654141677138574, guid: 35244a98f68a7754c99f3ae56c5ab19c,
         type: 3}
