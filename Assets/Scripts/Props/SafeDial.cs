@@ -99,5 +99,6 @@ public class SafeDial : MonoBehaviour, IInteractable
         safeUIToDisableWhenCorrect.SetActive(false);
         closedSafe.SetActive(false);
         openSafe.SetActive(true);
+        Sound.Safe.Play2D();
     }
 }
