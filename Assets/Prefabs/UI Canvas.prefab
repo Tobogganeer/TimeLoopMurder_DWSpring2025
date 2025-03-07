@@ -855,7 +855,6 @@ GameObject:
   - component: {fileID: 3578119869327059141}
   - component: {fileID: 5789692397915459334}
   - component: {fileID: 6890206996560929799}
-  - component: {fileID: 1714529247725799406}
   m_Layer: 5
   m_Name: Photo Menu
   m_TagString: Untagged
@@ -914,27 +913,6 @@ MonoBehaviour:
   photoPrefab: {fileID: 5587410571769868693, guid: 1fc7c8d3ca9173b4690795f119af9aa8,
     type: 3}
   photoHolder: {fileID: 6818804069610074079}
---- !u!95 &1714529247725799406
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952565686670982385}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19cb50595ad7a2144b0786ca4f1e5684, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2262836611523863119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,7 +1470,6 @@ GameObject:
   - component: {fileID: 3517607748490063890}
   - component: {fileID: 4694446242957785529}
   - component: {fileID: 3968342051066925621}
-  - component: {fileID: 3731733431461740520}
   m_Layer: 5
   m_Name: Journal Tab
   m_TagString: Untagged
@@ -1564,7 +1541,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4039659218230173908}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1602,20 +1579,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 32.743103, y: 41.207832}
   m_EdgeRadius: 0
---- !u!114 &3731733431461740520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4039659218230173908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6002078ce7763043ad9b38a047f317b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OpenCloser: {fileID: 1714529247725799406}
-  opened: 0
 --- !u!1 &4552929507425204193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2937,8 +2900,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingActions: 12
-  minutesPerAction: 5
-  startingMinutes: 60
+  ranOutOfActionsWaitTime: 2
+  accusedSomeoneWaitTime: 5
+  fadeTime: 1
+  blackScreen: {fileID: 0}
 --- !u!1 &8262371052640094611
 GameObject:
   m_ObjectHideFlags: 0

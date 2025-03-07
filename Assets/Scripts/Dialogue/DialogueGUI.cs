@@ -84,13 +84,7 @@ public class DialogueGUI : MonoBehaviour
         if (line != null)
             Speak(npc, line.respondWith, addDefaultChoices);
         else
-            Speak(npc, "(No response yet)", addDefaultChoices);
-
-        // TODO: Remove after demo
-        if (npc == NPC.ID.Butler && evidence == EvidenceObject.Type.Footprints)
-        {
-            PopUp.Show("This is incriminating evidence. Using photos to question the 4 NPCs is how you'll solve the first puzzle.", 10f);
-        }
+            Speak(npc, "I don't know.", addDefaultChoices);
     }
 
     public static void ClearChoices()
