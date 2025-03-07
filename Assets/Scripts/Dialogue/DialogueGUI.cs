@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Tobo.Audio;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -70,6 +71,10 @@ public class DialogueGUI : MonoBehaviour
         instance.spokenLineText.text = text;
         if (addDefaultChoices)
             AddDefaultChoices();
+
+        Sound speech = instance.npcDict[npc].speechSound;
+        if (speech != null)
+            speech.Play2D();
     }
 
     public static void Speak(NPC.ID npc, NPC.DialogueType line, bool addDefaultChoices = true)

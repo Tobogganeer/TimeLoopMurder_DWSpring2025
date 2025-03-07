@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   headshot: {fileID: 21300000, guid: d42a6ce85d904f04c969cbb7fba7421f, type: 3}
+  speechSound: {fileID: 11400000, guid: 9dafc5d7f04244344b3897d3edf2d6aa, type: 2}
   dialogue:
   - whenAsked: 0
     respondWith: It's a pleasure seeing you here. Your father told me all about you.

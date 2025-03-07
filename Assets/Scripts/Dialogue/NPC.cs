@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Tobo.Audio;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/NPC")]
@@ -10,6 +11,7 @@ public class NPC : ScriptableObject
 
     public ID id;
     public Sprite headshot;
+    public Sound speechSound;
 
     public List<InspectorDialogueLine> dialogue;
     public List<InspectorEvidenceLine> evidenceResponses;

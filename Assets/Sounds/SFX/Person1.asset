@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687e7219b33c27445909a75ec375ab60, type: 3}
+  m_Name: Person1
+  m_EditorClassIdentifier: 
+  soundID: -1878823067
+  clips:
+  - {fileID: 8300000, guid: 76abfd0c6f5eda745b9519b6fa7c07f3, type: 3}
+  - {fileID: 8300000, guid: bf6bc2bbb0473de4c87e0e80270c6dfc, type: 3}
+  - {fileID: 8300000, guid: 6ab99f5423c01094b8dbea4adda6dad6, type: 3}
+  - {fileID: 8300000, guid: a9897f3dbb2d15349ad9b8f89737b66a, type: 3}
+  - {fileID: 8300000, guid: d4067159697bcf148aac06eb95b8fdf4, type: 3}
+  - {fileID: 8300000, guid: 08f5b3fe16f3f8e4fb49816fbb53ca63, type: 3}
+  - {fileID: 8300000, guid: 0f2d671e79e03464fb3b2ba1ed585016, type: 3}
+  - {fileID: 8300000, guid: b991e1ce3dd03f546b0351412cbbc8e0, type: 3}
+  maxDistance: 35
+  category: 1
+  volume: 1
+  minPitch: 0.85
+  maxPitch: 1.1
+  is2d: 1

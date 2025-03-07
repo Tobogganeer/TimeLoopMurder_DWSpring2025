@@ -20,6 +20,9 @@ namespace Tobo.Audio
             G_U_N = 726955317,
             Glass_Breaking = -295322627,
             Move = 23645320,
+            Person1 = -1878823067,
+            Person2 = -1878823066,
+            Person3 = -1878823065,
             PhotoDrag = 930660399,
             PhotoDrop = 930660842,
             Rewind = 1382263730,
@@ -37,6 +40,9 @@ namespace Tobo.Audio
         public static Sound G_U_N => Get(ID.G_U_N);
         public static Sound Glass_Breaking => Get(ID.Glass_Breaking);
         public static Sound Move => Get(ID.Move);
+        public static Sound Person1 => Get(ID.Person1);
+        public static Sound Person2 => Get(ID.Person2);
+        public static Sound Person3 => Get(ID.Person3);
         public static Sound PhotoDrag => Get(ID.PhotoDrag);
         public static Sound PhotoDrop => Get(ID.PhotoDrop);
         public static Sound Rewind => Get(ID.Rewind);
@@ -63,6 +69,9 @@ namespace Tobo.Audio
             { "G U N", Sound.ID.G_U_N },
             { "Glass Breaking", Sound.ID.Glass_Breaking },
             { "Move", Sound.ID.Move },
+            { "Person1", Sound.ID.Person1 },
+            { "Person2", Sound.ID.Person2 },
+            { "Person3", Sound.ID.Person3 },
             { "PhotoDrag", Sound.ID.PhotoDrag },
             { "PhotoDrop", Sound.ID.PhotoDrop },
             { "Rewind", Sound.ID.Rewind },
