@@ -38,7 +38,9 @@ MonoBehaviour:
   - whenShown: 0
     respondWith: Nothing special, they're just flat dress shoes. Do you like them?
   - whenShown: 3
-    respondWith: Of course I do, sweetie. It's where your father keeps his gun.
+    respondWith: Of course I do, sweetie. It's where your father keeps his gun. Are
+      you trying to get in there? His combination is always just the house number...
+      Or maybe it's unlocked?
   - whenShown: 1
     respondWith: Of course I'm strong enough to move the potted plant. I moved it
       there last week, remember?
