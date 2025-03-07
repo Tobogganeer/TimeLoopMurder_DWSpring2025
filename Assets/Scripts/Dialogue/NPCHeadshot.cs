@@ -10,6 +10,13 @@ public class NPCHeadshot : MonoBehaviour, ICustomCursor, ICanHaveEvidenceDropped
 
     public void HandleEvidence(EvidenceObject.Type type)
     {
+        // Let the dad handle evidence on his own (special cases for accusations)
+        if (DialogueGUI.CurrentNPC.id == NPC.ID.Dad)
+        {
+            Dad.instance.HandleEvidence(type);
+            return;
+        }
+
         DialogueGUI.ClearChoices();
         DialogueGUI.AddBackChoice();
         DialogueGUI.AddChoice(type.GetQuestion(), () => DialogueGUI.Speak(DialogueGUI.CurrentNPC.id, type));
