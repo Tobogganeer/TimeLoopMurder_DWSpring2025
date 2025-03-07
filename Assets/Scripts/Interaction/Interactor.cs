@@ -35,7 +35,7 @@ public class Interactor : MonoBehaviour
 
     private void Update()
     {
-        if (!Enabled)
+        if (!isEnabled)
         {
             // Set default cursor
             cursors.SetCursorType(CursorType.Default);
