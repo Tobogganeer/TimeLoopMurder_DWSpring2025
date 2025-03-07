@@ -22,6 +22,8 @@ namespace Tobo.Audio
             Move = 23645320,
             PhotoDrag = 930660399,
             PhotoDrop = 930660842,
+            Rewind = 1382263730,
+            Safe = 23810116,
             Select = 1410561011,
             SlotHover = -1850161273,
             Suspense_1_Loop = 1777985376,
@@ -37,6 +39,8 @@ namespace Tobo.Audio
         public static Sound Move => Get(ID.Move);
         public static Sound PhotoDrag => Get(ID.PhotoDrag);
         public static Sound PhotoDrop => Get(ID.PhotoDrop);
+        public static Sound Rewind => Get(ID.Rewind);
+        public static Sound Safe => Get(ID.Safe);
         public static Sound Select => Get(ID.Select);
         public static Sound SlotHover => Get(ID.SlotHover);
         public static Sound Suspense_1_Loop => Get(ID.Suspense_1_Loop);
@@ -61,6 +65,8 @@ namespace Tobo.Audio
             { "Move", Sound.ID.Move },
             { "PhotoDrag", Sound.ID.PhotoDrag },
             { "PhotoDrop", Sound.ID.PhotoDrop },
+            { "Rewind", Sound.ID.Rewind },
+            { "Safe", Sound.ID.Safe },
             { "Select", Sound.ID.Select },
             { "SlotHover", Sound.ID.SlotHover },
             { "Suspense_1_Loop", Sound.ID.Suspense_1_Loop },
